@@ -1,0 +1,570 @@
+﻿@{
+    ViewData["Title"] = "Calendar";
+}
+<link rel="stylesheet" href="~/css/bootstrap-year-calendar.min.css" />
+@*<link rel="stylesheet" href="~/css/bootstrap-datepicker.min.css" />
+<link rel="stylesheet" href="~/css/bootstrap-datetimepicker.css" />*@
+<link rel="stylesheet" href="~/css/jquery.datetimepicker.min.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#TrainingId").change(function () {
+            var Id = $("#TrainingId").val();
+            LoadUserData(Id);
+        });
+
+        function LoadUserData(Id) {
+            $.ajax({
+                url: "/User/LoadUsersForTraining/" + Id,
+                cache: false,
+                type: "POST",
+                success: function (data) {
+                    var markup = "";
+                    for (var x = 0; x < data.data.length; x++) {
+                        markup += "<option value=" + data.data[x].Id + ">" + data.data[x].Name + "</option>";
+                    }
+                    $("#AttendeeId").html(markup).show();
+                },
+                error: function (reponse) {
+                    alert("error : " + reponse);
+                }
+            });
+        }
+
+        $('#datetimepicker').datetimepicker();
+
+        function editEvent(event) {
+            $('#event-modal input[name="event-index"]').val(event ? event.trainingid : '');
+            $('#event-modal input[name="event-name"]').val(event ? event.name : '');
+            $('#event-modal input[name="event-description"]').val(event ? event.description : '');
+            //$('#event-modal input[name="event-start-date"]').datetimepicker('update', event ? event.startDate : '');
+            //$('#event-modal input[name="event-end-date"]').datetimepicker('update', event ? event.endDate : '');
+
+            //$('#datetimepicker6').data("DateTimePicker").date(new Date('05/05/2020'));
+            //$('#datetimepicker7').data("DateTimePicker").date(event.endDate);
+
+            //working
+            //$('#datetimepicker6').data("DateTimePicker").date('1/4/2020 14:23:12');
+
+            $('#datetimepicker6').data("DateTimePicker").date(event.startDate.getFullYear() + "-" + (event.startDate.getMonth() + 1) + "-" + event.startDate.getDate() + " " + event.startTime);
+
+            //Working
+            //$('#datetimepicker6').data("DateTimePicker").date(event.startDate);
+            //$('#datetimepicker7').data("DateTimePicker").date(event.endDate);
+
+            $('#event-modal').modal();
+        }
+
+        function deleteEvent(event) {
+            var dataSource = $('#calendar').data('calendar').getDataSource();
+
+            for (var i in dataSource) {
+                if (dataSource[i].id == event.id) {
+                    dataSource.splice(i, 1);
+                    break;
+                }
+            }
+
+            $('#calendar').data('calendar').setDataSource(dataSource);
+        }
+
+        function attendanceEvent(event) {
+            $('#event-modal-attendance input[name="event-calendar-attendance"]').val(event ? event.Id : '');
+            $('#event-modal-attendance input[name="event-presenter-attendance"]').val(event ? event.presenter : '');
+            $('#event-modal-attendance input[name="event-training-attendance"]').val(event ? event.name : '');
+            $('#event-modal-attendance input[name="event-startdate-attendance"]').val(event ? event.startDate.getFullYear() + "-" + (event.startDate.getMonth() + 1) + "-" + event.startDate.getDate() + " " + event.startTime : '');
+
+            var vHTML = "";
+            var markup = "";
+            for (var x = 0; x < event.attendees.length; x++) {
+                markup += "<option value=" + event.attendees[x].attendeeid + " " + ((event.attendees[x].attended == 'True') ? "selected" : "") + ">" + event.attendees[x].attendee + "</option>";
+                vHTML += '<div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input" value="">' + event.attendees[x].attendee + '</label></div>';
+            }
+            $("#AttendenceAttendeeId").html(markup).show();
+            $("#chkpresent").html(vHTML).show();
+            $("#AttendenceAttendeeId").focus();
+            $('#event-modal-attendance').modal();
+        }
+
+        function saveEvent() {
+            $('#error').show();
+            if ($("#AttendeeId").val().length == 0) {
+                $("#error").text('Please Select Attendee');
+                return;
+            }
+            if ($("#Duration").val().length == 0) {
+                $("#error").text('Please provide Duration in Hours');
+                return;
+            }
+            $('#error').hide();
+            var event = {
+                id: $('#event-modal input[name="event-index"]').val(),
+                name: $('#event-modal input[name="event-name"]').val(),
+                location: $('#event-modal input[name="event-location"]').val(),
+                startDate: $('#event-modal input[name="event-start-date"]').datetimepicker('getDate'),
+                endDate: $('#event-modal input[name="event-end-date"]').datetimepicker('getDate')
+            }
+
+            var stratdatestr = new Date($("#datetimepicker6").data("DateTimePicker").date()),
+                startformatted = stratdatestr.getFullYear() + "-" + (stratdatestr.getMonth() + 1) + "-" + stratdatestr.getDate() + " " + stratdatestr.getHours() + ":" + stratdatestr.getMinutes() + ":" + stratdatestr.getSeconds();
+
+            //var enddatestr = new Date($("#datetimepicker7").data("DateTimePicker").date()),
+            //    endformatted = enddatestr.getFullYear() + "-" + (enddatestr.getMonth() + 1) + "-" + enddatestr.getDate() + " " + enddatestr.getHours() + ":" + enddatestr.getMinutes() + ":" + enddatestr.getSeconds();
+
+            var optVal = [];
+            var tempVal = [];
+            $("#AttendeeId").each(function () {
+                var val = $(this).val();
+                var tempVal = $("#AttendeeId").val();
+
+                if (tempVal.indexOf(val) >= 0 && optVal.indexOf(val) < 0) {
+                    optVal.push(val);
+                } else if (tempVal.indexOf(val) < 0 && optVal.indexOf(val) >= 0) {
+                    optVal.splice(optVal.indexOf(val), 1);
+                }
+            });
+
+            $.ajax({
+                type: 'POST',
+                url: "/Calendar/PostDataJson",
+                data: JSON.stringify({ StartDate: stratdatestr, StartDatestr: startformatted, Duration: $('#Duration').val(), Description: $('#Description').val(), PresenterId: $('#PresenterId').val(), TrainingId: $('#TrainingId').val(), Attendees: $('#AttendeeId').val() }),
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                    if (data.success) {
+                        LoadCalendarData()
+                    }
+                },
+                error: function () {
+                    alert("error");
+                }
+            });
+
+            //$.ajax({
+            //    type: 'POST',
+            //    url: "/Calendar/PostDataJson",
+            //    data: JSON.stringify({ StartDate: stratdatestr, StartDatestr: startformatted, EndDate: enddatestr, EndDatestr: endformatted, Description: $('#Description').val(), PresenterId: $('#PresenterId').val(), TrainingId: $('#TrainingId').val(), Attendees: $('#AttendeeId').val() }),
+            //    contentType: 'application/json; charset=utf-8',
+            //    success: function (data) {
+            //        if (data.success) {
+            //            LoadCalendarData()
+            //        }
+            //    },
+            //    error: function () {
+            //        alert("error");
+            //    }
+            //});
+
+            //var dataSource = $('#calendar').data('calendar').getDataSource();
+
+            //if (event.id) {
+            //    for (var i in dataSource) {
+            //        if (dataSource[i].id == event.id) {
+            //            dataSource[i].name = event.name;
+            //            dataSource[i].location = event.location;
+            //            dataSource[i].startDate = event.startDate;
+            //            dataSource[i].endDate = event.endDate;
+            //        }
+            //    }
+            //}
+            //else {
+            //    var newId = 0;
+            //    for (var i in dataSource) {
+            //        if (dataSource[i].id > newId) {
+            //            newId = dataSource[i].id;
+            //        }
+            //    }
+
+            //    newId++;
+            //    event.id = newId;
+
+            //    dataSource.push(event);
+            //}
+
+            //$('#calendar').data('calendar').setDataSource(dataSource);
+
+            $('#event-modal').modal('hide');
+        }
+
+        function markAttendanceEvent() {
+           
+            var optVal = [];
+            var tempVal = [];
+            $("#AttendeeId").each(function () {
+                var val = $(this).val();
+                var tempVal = $("#AttendenceAttendeeId").val();
+
+                if (tempVal.indexOf(val) >= 0 && optVal.indexOf(val) < 0) {
+                    optVal.push(val);
+                } else if (tempVal.indexOf(val) < 0 && optVal.indexOf(val) >= 0) {
+                    optVal.splice(optVal.indexOf(val), 1);
+                }
+            });
+
+            $.ajax({
+                type: 'POST',
+                url: "/Calendar/PostAttendanceDataJson",
+                data: JSON.stringify({ CalendarId: $('#AttendanceCalendarId').val(), Attendees: $('#AttendenceAttendeeId').val() }),
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                    if (data.success) {
+                        LoadCalendarData();
+                    }
+                },
+                error: function () {
+                    alert("error");
+                }
+            });
+
+            $('#event-modal-attendance').modal('hide');
+        }
+
+        $(function () {
+            LoadUserData($("#TrainingId").val());
+
+            var currentYear = new Date().getFullYear();
+
+            $('#save-event').click(function () {
+                saveEvent();
+            });
+
+            $('#attendance-event').click(function () {
+                markAttendanceEvent();
+            });
+
+            $('#datetimepicker6').datetimepicker({
+                format: 'YYYY-MM-DD HH:mm'
+            });
+
+            //$('#datetimepicker7').datetimepicker({
+            //    useCurrent: false //Important! See issue #1075
+            //});
+
+            $("#datetimepicker6").on("dp.change", function (e) {
+                //$('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+            });
+            //$("#datetimepicker7").on("dp.change", function (e) {
+            //    $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+            //});
+
+            $.ajax({
+                url: '/Calendar/LoadCalendar'
+            }).done(function (data) {
+                //data: data.caldata
+                var calendarData = JSON.parse(data.caldata);
+                var fulldata = [];
+                //var calendarData = (data.caldata);
+                for (var i = 0; i < calendarData.length; i++) {
+                    calendarData[i].startDate = new Date(calendarData[i].startDate);
+                    calendarData[i].endDate = new Date(calendarData[i].endDate);
+                    var d = "";
+                }
+                $('#calendar').calendar({
+                    enableContextMenu: true,
+                    enableRangeSelection: true,
+                    contextMenuItems: [
+                        {
+                            text: 'Update',
+                            click: editEvent
+                        },
+                        {
+                            text: 'Delete',
+                            click: deleteEvent
+                        },
+                        {
+                            text: 'Attendance',
+                            click: attendanceEvent
+                        }
+                    ],
+                    selectRange: function (e) {
+                        editEvent({ startDate: e.startDate, endDate: e.endDate });
+                    },
+                    //clickDay: function(e) {
+                    //alert('Click on day ' + e.date.toString());
+                    //},
+                    mouseOnDay: function (e) {
+                        if (e.events.length > 0) {
+                            var content = '';
+
+                            for (var i in e.events) {
+                                var attendees = '';
+                                for (var j in e.events[i].attendees) {
+                                    attendees += e.events[i].attendees[j].attendee + ', ';
+                                }
+                                content += '<div class="event-tooltip-content">'
+                                    + '<div class="event-name" style="color:' + e.events[i].color + '">' + e.events[i].name + '</div>'
+                                    + '<div class="event-presenter" style="color:red">' + e.events[i].presenter + '</div>'
+                                    + '<div class="event-attendee" style="color:green">' + attendees + '</div>'
+                                    + '<div class="event-starttime">' + e.events[i].startTime + '</div>'
+                                    + '</div>';
+                            }
+
+                            $(e.element).popover({
+                                trigger: 'manual',
+                                container: 'body',
+                                html: true,
+                                content: content
+                            });
+
+                            $(e.element).popover('show');
+                        }
+                    },
+                    mouseOutDay: function (e) {
+                        if (e.events.length > 0) {
+                            $(e.element).popover('hide');
+                        }
+                    },
+                    dayContextMenu: function (e) {
+                        $(e.element).popover('hide');
+                    },
+                    //dataSource: [{ "Id": "10", "startDate": new Date('2020-01-01'), "endDate": new Date('2020-01-01'), "name": "Onboarding Training - Complete", "presenter": "Subeesh Charoth", "attendee": "Mayank Bhardwaj,Abhishek Nayagam,Manivannan Ganapathy," }],
+                    //dataSource: [{"Id":"10","startDate": "2020-01-01T00:00:00Z","endDate": "2020-01-01T00:00:00Z","startTime": "10:51","name": "Onboarding Training - Complete","presenter": "Subeesh Charoth","attendee":"Mayank Bhardwaj"}],
+                    //dataSource: JSON.parse(data.caldata),
+                    //dataSource: [{"Id":"10","startDate": "2020/01/07T18:25:43.511Z","endDate": "2020-01-07T18:25:43.511Z","startTime": "10:51","name": "Onboarding Training - Complete","presenter": "Subeesh Charoth","attendee":"Mayank Bhardwaj, Abhishek Nayagam, Manivannan Ganapathy,"}],
+                    dataSource: calendarData
+                });
+            });
+        });
+
+        function LoadCalendarData() {
+            $.ajax({
+                url: '/Calendar/LoadCalendar'
+            }).done(function (data) {
+                var calendarData = JSON.parse(data.caldata);
+                var fulldata = [];
+                for (var i = 0; i < calendarData.length; i++) {
+                    calendarData[i].startDate = new Date(calendarData[i].startDate);
+                    calendarData[i].endDate = new Date(calendarData[i].endDate);
+                    var d = "";
+                }
+                $('#calendar').calendar({
+                    enableContextMenu: true,
+                    enableRangeSelection: true,
+                    contextMenuItems: [
+                        {
+                            text: 'Update',
+                            click: editEvent
+                        },
+                        {
+                            text: 'Delete',
+                            click: deleteEvent
+                        },
+                        {
+                            text: 'Attendance',
+                            click: attendanceEvent
+                        }
+                    ],
+                    selectRange: function (e) {
+                        editEvent({ startDate: e.startDate, endDate: e.endDate });
+                    },
+                    mouseOnDay: function (e) {
+                        if (e.events.length > 0) {
+                            var content = '';
+
+                            for (var i in e.events) {
+                                var attendees = '';
+                                for (var j in e.events[i].attendees) {
+                                    attendees += e.events[i].attendees[j].attendee + ', ';
+                                }
+                                content += '<div class="event-tooltip-content">'
+                                    + '<div class="event-name" style="color:' + e.events[i].color + '">' + e.events[i].name + '</div>'
+                                    + '<div class="event-presenter" style="color:red">' + e.events[i].presenter + '</div>'
+                                    + '<div class="event-attendee" style="color:green">' + attendees + '</div>'
+                                    + '<div class="event-starttime">' + e.events[i].startTime + '</div>'
+                                    + '</div>';
+                            }
+
+                            $(e.element).popover({
+                                trigger: 'manual',
+                                container: 'body',
+                                html: true,
+                                content: content
+                            });
+
+                            $(e.element).popover('show');
+                        }
+                    },
+                    mouseOutDay: function (e) {
+                        if (e.events.length > 0) {
+                            $(e.element).popover('hide');
+                        }
+                    },
+                    dayContextMenu: function (e) {
+                        $(e.element).popover('hide');
+                    },
+                    dataSource: calendarData
+                });
+            });
+        }
+    });
+</script>
+<h2>Yearly Training Calendar</h2>
+<div id="calendar" class="calendar">
+
+</div>
+<div class="modal modal-fade in" id="event-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">
+                    Setup Meeting
+                </h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" name="event-index" value="">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Presenter</label>
+                        <div class="col-sm-7">
+                            <select id="PresenterId" class="form-control" asp-items="@(new SelectList(@ViewBag.UserList,"Id", "DisplayName"))"> </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Training</label>
+                        <div class="col-sm-7">
+                            <select id="TrainingId" class="form-control" asp-items="@(new SelectList(@ViewBag.TrainingList,"Id", "Name"))"> </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Attendees</label>
+                        <div class="col-sm-7">
+                            <select id="AttendeeId" multiple class="form-control"> </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Description</label>
+                        <div class="col-sm-7">
+                            <input name="event-description" id="Description" type="text" class="form-control">
+                        </div>
+                    </div>
+
+                    @*<div class="form-group">
+                        <div class='col-md-5'>
+                            <div class="form-group">
+                                <div class='input-group date' id='datetimepicker6'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-5'>
+                            <div class="form-group">
+                                <div class='input-group date' id='datetimepicker7'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Date Time</label>
+                        <div class="col-sm-7 input-group date" id='datetimepicker6'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Duration in Hours</label>
+                        <div class="col-sm-7">
+                            <input id="Duration" class="form-control" type="number" value="1" />
+                        </div>
+                    </div>
+                    <div class="form-group" style="color:red">
+                        <div class="col-sm-7" id="error" >
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="save-event">
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-fade in" id="event-modal-attendance">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">
+                    Mark Attendance
+                </h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" name="event-index" value="">
+                <form class="form-horizontal">
+                    <div class="form-group" style="visibility:hidden">
+                        <div class="col-sm-7">
+                            <input name="event-calendar-attendance" id="AttendanceCalendarId" type="text" class="form-control" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Presenter</label>
+                        <div class="col-sm-7">
+                            <input name="event-presenter-attendance" id="AttendancePresenterId" type="text" class="form-control" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Training</label>
+                        <div class="col-sm-7">
+                            <input name="event-training-attendance" id="AttendanceTrainingId" type="text" class="form-control" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Start Date</label>
+                        <div class="col-sm-7">
+                            <input name="event-startdate-attendance" id="AttendanceStartDate" type="text" class="form-control" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Select Present Attendees</label>
+                        <div class="col-sm-7">
+                            <select id="AttendenceAttendeeId" multiple class="form-control"> </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Select Present Attendees</label>
+                        <div class="col-sm-7" id="chkpresent">
+                            @*<div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">Option 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">Option 2
+                                </label>
+                            </div>*@
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="attendance-event">
+                    Mark Attendance
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+@*<div class="container">
+    <div class="row">
+        <div class="col-sm-12 top-buffer">
+            <input type="text" id="datetimepicker" />
+        </div>
+    </div>
+</div>*@

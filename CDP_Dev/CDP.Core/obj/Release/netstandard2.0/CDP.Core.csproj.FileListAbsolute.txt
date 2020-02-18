@@ -1,0 +1,16 @@
+C:\Users\MBH\source\repos\CDP_Dev\CDP.Core\bin\Release\netstandard2.0\CDP.Core.deps.json
+C:\Users\MBH\source\repos\CDP_Dev\CDP.Core\bin\Release\netstandard2.0\CDP.Core.dll
+C:\Users\MBH\source\repos\CDP_Dev\CDP.Core\bin\Release\netstandard2.0\CDP.Core.pdb
+C:\Users\MBH\source\repos\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.csprojAssemblyReference.cache
+C:\Users\MBH\source\repos\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.AssemblyInfoInputs.cache
+C:\Users\MBH\source\repos\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.AssemblyInfo.cs
+C:\Users\MBH\source\repos\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.dll
+C:\Users\MBH\source\repos\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.pdb
+E:\MBH\Projects\CDP_Dev\CDP.Core\bin\Release\netstandard2.0\CDP.Core.deps.json
+E:\MBH\Projects\CDP_Dev\CDP.Core\bin\Release\netstandard2.0\CDP.Core.dll
+E:\MBH\Projects\CDP_Dev\CDP.Core\bin\Release\netstandard2.0\CDP.Core.pdb
+E:\MBH\Projects\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.csprojAssemblyReference.cache
+E:\MBH\Projects\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.AssemblyInfoInputs.cache
+E:\MBH\Projects\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.AssemblyInfo.cs
+E:\MBH\Projects\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.dll
+E:\MBH\Projects\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.pdb

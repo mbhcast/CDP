@@ -1,0 +1,106 @@
+﻿@model CDP.Core.Allocations.UserAllocation
+
+@{
+    ViewData["Title"] = "CreateUserAllocation";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<h3>Create User Allocation</h3>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateUserAllocation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                    <label asp-for="Id" class="control-label"></label>
+                    <input asp-for="Id" class="form-control" />
+                    <span asp-validation-for="Id" class="text-danger"></span>
+                </div>*@
+            @*<div class="form-group">
+                    <label asp-for="UserId" class="control-label"></label>
+                    <input asp-for="UserId" class="form-control" />
+                    <span asp-validation-for="UserId" class="text-danger"></span>
+                </div>*@
+            <div class="form-group">
+                <label asp-for="User" class="control-label"></label>
+                <select asp-for="UserId" class="form-control" asp-items="@(new SelectList(@ViewBag.UserList,"Id", "Name"))"></select>
+                <span asp-validation-for="User" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Allocation" class="control-label"></label>
+                <select asp-for="AllocationId" class="form-control" ></select>
+                <span asp-validation-for="Allocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comment" class="control-label"></label>
+                <input asp-for="Comment" class="form-control" />
+                <span asp-validation-for="Comment" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                    <label asp-for="CreatedOn" class="control-label"></label>
+                    <input asp-for="CreatedOn" class="form-control" />
+                    <span asp-validation-for="CreatedOn" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastUpdated" class="control-label"></label>
+                    <input asp-for="LastUpdated" class="form-control" />
+                    <span asp-validation-for="LastUpdated" class="text-danger"></span>
+                </div>*@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="UserAllocation">Back to List</a>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //var UserId = getUrlVars()["UserId"];
+        var UserId = localStorage.getItem("UserId");
+        if (UserId != null) {
+            $("#UserId").val(UserId);
+        }
+        LoadData($("#UserId").val());
+        $("#UserId").change(function () {
+            var Id = $("#UserId").val();
+            LoadData(Id);
+            setUserIdForLink(Id);
+        });
+
+        function LoadData(Id) {
+            $.ajax({
+                url: "/Allocation/LoadUserAllocationNotMapped/" + Id,
+                cache: false,
+                type: "POST",
+                success: function (data) {
+                    var markup = "";
+                    for (var x = 0; x < data.length; x++) {
+                        markup += "<option value=" + data[x].Id + ">" + data[x].Name + "</option>";
+                    }
+                    $("#AllocationId").html(markup).show();
+                },
+                error: function (reponse) {
+                    alert("error : " + reponse);
+                }
+            });
+        }
+
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+    });
+</script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

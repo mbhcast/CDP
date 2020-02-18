@@ -1,0 +1,53 @@
+﻿@model CDP.Core.Aspirations.UserAspiration
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Are you sure you want to delete this Aspiration?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        @*<dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>*@
+        <dt>
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdated)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="List">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,107 @@
+﻿@model CDP.Core.Training.TrainingMaster
+
+@{
+    ViewData["Title"] = "CreateTrainingMaster";
+}
+
+<h3>Create Training Master</h3>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateTrainingMaster">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Code" class="control-label"></label>
+                <input asp-for="Code" class="form-control" />
+                <span asp-validation-for="Code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+            <label asp-for="TrainingCategoryId" class="control-label"></label>
+            <input asp-for="TrainingCategoryId" class="form-control" />
+            <span asp-validation-for="TrainingCategoryId" class="text-danger"></span>
+        </div>*@
+            <div class="form-group">
+                <label asp-for="TrainingCategory" class="control-label">Training Category</label>
+                @*<input asp-for="TrainingCategory" class="form-control" />*@
+                <span asp-validation-for="TrainingCategory" class="text-danger"></span>
+                <select asp-for="TrainingCategoryId" class="form-control" asp-items="@(new SelectList(@ViewBag.TrainingCategoryList,"Id", "Name"))"> </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TOC" class="control-label"></label>
+                <input asp-for="TOC" class="form-control" />
+                <span asp-validation-for="TOC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsExternal" /> @Html.DisplayNameFor(model => model.IsExternal)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@*<script type="text/javascript">
+    $(document).ready(function () {
+
+        var UserId = getUrlVars()["UserId"];
+        if (UserId != null) {
+            $("#UserId").val(UserId);
+        }
+        LoadData($("#UserId").val());
+        $("#UserId").change(function () {
+            var Id = $("#UserId").val();
+            LoadData(Id);
+        });
+
+        function LoadData(Id) {
+            $.ajax({
+                url: "/Skill/LoadUserTrainingNotMapped/" + Id,
+                cache: false,
+                type: "POST",
+                success: function (data) {
+                    var markup = "";
+                    for (var x = 0; x < data.length; x++) {
+                        markup += "<option value=" + data[x].Id + ">" + data[x].Name + "</option>";
+                    }
+                    $("#TrainingId").html(markup).show();
+                },
+                error: function (reponse) {
+                    alert("error : " + reponse);
+                }
+            });
+        }
+
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+    });
+</script>*@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

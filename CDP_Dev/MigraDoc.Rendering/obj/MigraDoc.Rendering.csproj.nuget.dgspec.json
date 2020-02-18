@@ -1,0 +1,258 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj": {}
+  },
+  "projects": {
+    "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {
+      "version": "3.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj",
+        "projectName": "MigraDoc.DocumentObjectModel",
+        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj",
+        "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
+        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj": {
+      "version": "3.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj",
+        "projectName": "MigraDoc.Rendering",
+        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj",
+        "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
+        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {
+                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj"
+              },
+              "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj": {
+                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj"
+              },
+              "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj": {
+                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj": {
+      "version": "3.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj",
+        "projectName": "PdfSharp.Charting",
+        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj",
+        "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
+        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj": {
+                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj": {
+      "version": "3.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj",
+        "projectName": "PdfSharp",
+        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj",
+        "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
+        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

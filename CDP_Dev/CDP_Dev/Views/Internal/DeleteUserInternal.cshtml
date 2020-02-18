@@ -1,0 +1,70 @@
+﻿@model CDP.Core.Internals.UserInternal
+
+@{
+    ViewData["Title"] = "DeleteUserInternal";
+}
+<h3>Are you sure you want to delete this User Internal?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        @*<dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>*@
+        <dt>
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User)
+        </dd>
+        @*<dt>
+            @Html.DisplayNameFor(model => model.InternalId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InternalId)
+        </dd>*@
+        <dt>
+            @Html.DisplayNameFor(model => model.Topic)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Topic)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TrainingMode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TrainingMode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdated)
+        </dd>
+    </dl>
+    
+    <form asp-action="DeleteUserInternal">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="UserInternal">Back to List</a>
+    </form>
+</div>

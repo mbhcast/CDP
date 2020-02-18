@@ -1,0 +1,8 @@
+E:\MBH\Projects\CDP_Dev\MigraDoc.DocumentObjectModel\bin\Debug\netstandard2.0\MigraDoc.DocumentObjectModel.deps.json
+E:\MBH\Projects\CDP_Dev\MigraDoc.DocumentObjectModel\bin\Debug\netstandard2.0\MigraDoc.DocumentObjectModel.dll
+E:\MBH\Projects\CDP_Dev\MigraDoc.DocumentObjectModel\bin\Debug\netstandard2.0\MigraDoc.DocumentObjectModel.pdb
+E:\MBH\Projects\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Debug\netstandard2.0\MigraDoc.DocumentObjectModel.csprojAssemblyReference.cache
+E:\MBH\Projects\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Debug\netstandard2.0\MigraDoc.DocumentObjectModel.AssemblyInfoInputs.cache
+E:\MBH\Projects\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Debug\netstandard2.0\MigraDoc.DocumentObjectModel.AssemblyInfo.cs
+E:\MBH\Projects\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Debug\netstandard2.0\MigraDoc.DocumentObjectModel.dll
+E:\MBH\Projects\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Debug\netstandard2.0\MigraDoc.DocumentObjectModel.pdb
