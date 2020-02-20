@@ -1,0 +1,111 @@
+﻿@model CDP.Core.Reports.ReportUserInternal
+
+@{
+    ViewData["Title"] = "Mark User Internal";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<h3>Mark User Internal</h3>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="MarkUserInternal">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="User" class="control-label"></label>
+                    <select asp-for="UserId" class="form-control" asp-items="@(new SelectList(@ViewBag.UserList,"Id", "Name"))"></select>
+                    <span asp-validation-for="User" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UserInternal" class="control-label"></label>
+                    <select asp-for="UserInternalId" class="form-control"></select>
+                    <span asp-validation-for="UserInternal" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Period" class="control-label"></label>
+                    <select asp-for="PeriodId" class="form-control"></select>
+                    <span asp-validation-for="Period" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Comment" class="control-label"></label>
+                    <input asp-for="Comment" class="form-control" />
+                    <span asp-validation-for="Comment" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Status" class="control-label"></label>
+                    <div id="status">
+                        @foreach (var status in @ViewBag.StatusList)
+                        {
+                            <label class="radio-inline"><input class="radio-inline" type="radio" asp-for="StatusId" value="@status.Id" />@status.Name</label>
+                        }
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Mark" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<script type="text/javascript">
+        $(document).ready(function () {
+            var UserId = localStorage.getItem("UserId");
+            if (UserId != null) {
+                $("#UserId").val(UserId);
+            }
+            LoadUserInternalData($("#UserId").val());
+            $("#UserId").change(function () {
+                $("#PeriodId").empty();
+                var Id = $("#UserId").val();
+                LoadUserInternalData(Id);
+                setUserIdForLink(Id);
+            });
+            $("#UserInternalId").change(function () {
+                var UserId = $("#UserId").val();
+                var UserInternalId = $("#InternalId").val();
+                LoadPeriod(UserId, UserInternalId);
+            });
+            function LoadUserInternalData(Id) {
+                $.ajax({
+                    url: "/Internal/LoadUserInternalData/" + Id,
+                    cache: false,
+                    type: "POST",
+                    success: function (data) {
+                        var markup = "";
+                        for (var x = 0; x < data.data.length; x++) {
+                            markup += "<option value=" + data.data[x].Id + ">" + data.data[x].Topic + "</option>";
+                        }
+                        $("#UserInternalId").html(markup).show();
+                        if (data.data.length > 0) {
+                            LoadPeriod($("#UserInternalId").val(), $("#UserId").val());
+                        }
+                    },
+                    error: function (reponse) {
+                        alert("error : " + reponse);
+                    }
+                });
+            }
+
+            function LoadPeriod(Id, UserId) {
+                $.ajax({
+                    url: "/Report/LoadNotMarkedInternalPeriod/" + Id + "?UserId=" + UserId,
+                    cache: false,
+                    type: "POST",
+                    success: function (data) {
+                        var markup = "";
+                        for (var x = 0; x < data.length; x++) {
+                            markup += "<option value=" + data[x].Id + ">" + data[x].Name + "</option>";
+                        }
+                        $("#PeriodId").html(markup).show();
+                    },
+                    error: function (reponse) {
+                        alert("error : " + reponse);
+                    }
+                });
+            }
+        });
+    </script>

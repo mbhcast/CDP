@@ -36,6 +36,8 @@ using CDP.Service.Logs;
 using CDP.Data.Common;
 using CDP.Service.Common;
 using AspNetCorePdf.PdfProvider;
+using CDP.Data.Reports;
+using CDP.Service.Reports;
 
 namespace CDP_Dev
 {
@@ -92,6 +94,7 @@ namespace CDP_Dev
             services.AddSingleton<ILog, Log>();
             services.AddSingleton<ICommon, Common>();
             services.AddSingleton<IUser, User>();
+            services.AddSingleton<IReport, Report>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

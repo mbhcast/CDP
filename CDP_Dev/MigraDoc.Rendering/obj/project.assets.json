@@ -286,11 +286,11 @@
   "project": {
     "version": "3.0.0",
     "restore": {
-      "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj",
+      "projectUniqueName": "E:\\git\\repo\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj",
       "projectName": "MigraDoc.Rendering",
-      "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj",
+      "projectPath": "E:\\git\\repo\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj",
       "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
-      "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\obj\\",
+      "outputPath": "E:\\git\\repo\\CDP_Dev\\MigraDoc.Rendering\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -306,14 +306,14 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {
-              "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj"
+            "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {
+              "projectPath": "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj"
             },
-            "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj": {
-              "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj"
+            "E:\\git\\repo\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj": {
+              "projectPath": "E:\\git\\repo\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj"
             },
-            "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj": {
-              "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj"
+            "E:\\git\\repo\\CDP_Dev\\PdfSharp\\PdfSharp.csproj": {
+              "projectPath": "E:\\git\\repo\\CDP_Dev\\PdfSharp\\PdfSharp.csproj"
             }
           }
         }

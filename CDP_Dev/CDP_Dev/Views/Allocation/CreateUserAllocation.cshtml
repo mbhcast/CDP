@@ -12,15 +12,15 @@
         <form asp-action="CreateUserAllocation">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             @*<div class="form-group">
-                    <label asp-for="Id" class="control-label"></label>
-                    <input asp-for="Id" class="form-control" />
-                    <span asp-validation-for="Id" class="text-danger"></span>
-                </div>*@
+            <label asp-for="Id" class="control-label"></label>
+            <input asp-for="Id" class="form-control" />
+            <span asp-validation-for="Id" class="text-danger"></span>
+        </div>*@
             @*<div class="form-group">
-                    <label asp-for="UserId" class="control-label"></label>
-                    <input asp-for="UserId" class="form-control" />
-                    <span asp-validation-for="UserId" class="text-danger"></span>
-                </div>*@
+            <label asp-for="UserId" class="control-label"></label>
+            <input asp-for="UserId" class="form-control" />
+            <span asp-validation-for="UserId" class="text-danger"></span>
+        </div>*@
             <div class="form-group">
                 <label asp-for="User" class="control-label"></label>
                 <select asp-for="UserId" class="form-control" asp-items="@(new SelectList(@ViewBag.UserList,"Id", "Name"))"></select>
@@ -28,7 +28,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Allocation" class="control-label"></label>
-                <select asp-for="AllocationId" class="form-control" ></select>
+                <select asp-for="AllocationId" class="form-control"></select>
                 <span asp-validation-for="Allocation" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -36,16 +36,21 @@
                 <input asp-for="Comment" class="form-control" />
                 <span asp-validation-for="Comment" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="Priority" class="control-label"></label>
+                <select asp-for="PriorityId" class="form-control" asp-items="@(new SelectList(@ViewBag.PriorityList,"Id", "Name"))"> </select>
+                <span asp-validation-for="Priority" class="text-danger"></span>
+            </div>
             @*<div class="form-group">
-                    <label asp-for="CreatedOn" class="control-label"></label>
-                    <input asp-for="CreatedOn" class="form-control" />
-                    <span asp-validation-for="CreatedOn" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="LastUpdated" class="control-label"></label>
-                    <input asp-for="LastUpdated" class="form-control" />
-                    <span asp-validation-for="LastUpdated" class="text-danger"></span>
-                </div>*@
+            <label asp-for="CreatedOn" class="control-label"></label>
+            <input asp-for="CreatedOn" class="form-control" />
+            <span asp-validation-for="CreatedOn" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="LastUpdated" class="control-label"></label>
+            <input asp-for="LastUpdated" class="form-control" />
+            <span asp-validation-for="LastUpdated" class="text-danger"></span>
+        </div>*@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-success" />
             </div>

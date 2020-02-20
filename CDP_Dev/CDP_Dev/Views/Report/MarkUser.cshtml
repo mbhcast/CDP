@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "Mark User Allocation";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<h3>Mark User</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="control-label"></label>
+                <select id="UserId" class="form-control" asp-items="@(new SelectList(@ViewBag.UserList,"Id", "Name"))"> </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Allocation</label>
+                <select Id="AllocationId" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Comment</label>
+                <input Id="Comment" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Period</label>
+                <select Id="PeriodId" class="form-control"> </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" Id="MarkUserAllocation" value="Mark" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var UserId = localStorage.getItem("UserId");
+        if (UserId != null) {
+            $("#UserId").val(UserId);
+        }
+        //LoadData($("#UserId").val());
+        $("#UserId").change(function () {
+            var Id = $("#UserId").val();
+            //LoadData(Id);
+            setUserIdForLink(Id);
+        });
+
+        function LoadData(Id) {
+            $.ajax({
+                url: "/Allocation/LoadUserAllocationNotMapped/" + Id,
+                cache: false,
+                type: "POST",
+                success: function (data) {
+                    var markup = "";
+                    for (var x = 0; x < data.length; x++) {
+                        markup += "<option value=" + data[x].Id + ">" + data[x].Name + "</option>";
+                    }
+                    $("#AllocationId").html(markup).show();
+                },
+                error: function (reponse) {
+                    alert("error : " + reponse);
+                }
+            });
+        }
+    });
+</script>

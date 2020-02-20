@@ -1,5 +1,6 @@
 ﻿using CDP.Core.Allocations;
 using CDP.Service.Allocations;
+using CDP.Service.Common;
 using CDP.Service.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -13,11 +14,13 @@ namespace CDP_Dev.Controllers
     {
         IAllocation _IAllocation;
         IUser _IUser;
+        ICommon _ICommon;
 
-        public AllocationController(IAllocation iallocation, IUser iuser)
+        public AllocationController(IAllocation iallocation, IUser iuser, ICommon icommon)
         {
             _IAllocation = iallocation;
             _IUser = iuser;
+            _ICommon = icommon;
         }
         public IActionResult Create()
         {
@@ -26,6 +29,13 @@ namespace CDP_Dev.Controllers
         public IActionResult CreateUserAllocation()
         {
             ViewBag.UserList = _IUser.GetInternalUserList();
+            ViewBag.PriorityList = _ICommon.GetPriorityList();
+            return View();
+        }
+        public IActionResult MarkUserAllocation()
+        {
+            ViewBag.UserList = _IUser.GetInternalUserList();
+            //ViewBag.PriorityList = _ICommon.GetPriorityList();
             return View();
         }
         public IActionResult Edit(int Id)
@@ -188,6 +198,19 @@ namespace CDP_Dev.Controllers
                 var AllocationList = _IAllocation.GetUserAllocationNotMappedList(Id);
                 //Returning Json Data  
                 return Json(AllocationList);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public IActionResult LoadUserAllocationNotMarked(int Id)
+        {
+            try
+            {
+                var UserAllocationList = _IAllocation.GetUserAllocationNotMarkedList(Id);
+                //Returning Json Data  
+                return Json(UserAllocationList);
             }
             catch (Exception)
             {

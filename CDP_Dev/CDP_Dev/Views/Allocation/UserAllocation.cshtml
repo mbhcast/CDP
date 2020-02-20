@@ -30,6 +30,7 @@
                     <th>@Html.DisplayNameFor(model => model.Id)</th>
                     <th>@Html.DisplayNameFor(model => model.Allocation)</th>
                     <th>@Html.DisplayNameFor(model => model.Comment)</th>
+                    <th>@Html.DisplayNameFor(model => model.Priority)</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -151,6 +152,7 @@
                     { "data": "Id", "name": "Id", "autoWidth": true, "visible": false },
                     { "data": "Allocation", "name": "Allocation", "autoWidth": true },
                     { "data": "Comment", "name": "Comment", "autoWidth": true },
+                    { "data": "Priority", "name": "Priority", "autoWidth": true },
                     {
                         "render": function (data, type, row) { return '<a class="btn btn-warning" href="/Allocation/EditUserAllocation/' + row.Id + '">Edit</a>'; }
                     },

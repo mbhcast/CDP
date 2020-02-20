@@ -12,6 +12,7 @@ namespace CDP.Service.Allocations
         List<Allocation> GetAllocationList();
         List<UserAllocation> GetUserAllocationList(int UserId);
         List<Allocation> GetUserAllocationNotMappedList(int UserId);
+        List<UserAllocation> GetUserAllocationNotMarkedList(int UserId);
         Allocation GetSingleAllocation(int Id);
         UserAllocation GetSingleUserAllocation(int Id);
         int UpdateUserAllocation(UserAllocation UserAllocation);

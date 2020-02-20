@@ -92,7 +92,20 @@ namespace CDP.Data.Allocations
                 return ret;
             }
         }
-
+        public List<Core.Allocations.UserAllocation> GetUserAllocationNotMarkedList(int UserId)
+        {
+            using (SqlConnection con = new SqlConnection(_ConnectionString.Value.ConnectionString))
+            {
+                string sql = @"SELECT A.Name AS Allocation, *FROM User_Allocation UA 
+                                LEFT JOIN Allocation A ON A.Id = UA.AllocationId 
+                                WHERE UA.UserId = @UserId 
+                                AND UA.Id NOT IN (SELECT UserAllocationId FROM Report_UserAllocation WHERE UserId = @UserId);";
+                var param = new DynamicParameters();
+                param.Add("@UserId", UserId);
+                var ret = con.Query<Core.Allocations.UserAllocation>(sql, param, null, true, 0, System.Data.CommandType.Text).ToList();
+                return ret;
+            }
+        }
         public int InsertAllocation(Core.Allocations.Allocation Allocation)
         {
             using (SqlConnection con = new SqlConnection(_ConnectionString.Value.ConnectionString))
@@ -127,6 +140,7 @@ namespace CDP.Data.Allocations
                 param.Add("@UserId", UserAllocation.UserId);
                 param.Add("@AllocationId", UserAllocation.AllocationId);
                 param.Add("@Comment", UserAllocation.Comment);
+                param.Add("@PriorityId", UserAllocation.PriorityId);
                 var result = con.Execute("InsertUpdateUserAllocation", param, sqltrans, 0, System.Data.CommandType.StoredProcedure);
 
                 if (result > 0)
@@ -175,6 +189,7 @@ namespace CDP.Data.Allocations
                 param.Add("@UserId", UserAllocation.UserId);
                 param.Add("@AllocationId", UserAllocation.AllocationId);
                 param.Add("@Comment", UserAllocation.Comment);
+                param.Add("@PriorityId", UserAllocation.PriorityId);
                 var result = con.Execute("InsertUpdateUserAllocation", param, sqltrans, 0, System.Data.CommandType.StoredProcedure);
 
                 if (result > 0)

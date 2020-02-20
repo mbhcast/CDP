@@ -284,11 +284,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj",
+      "projectUniqueName": "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj",
       "projectName": "CDP.Core",
-      "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj",
+      "projectPath": "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj",
       "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
-      "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\obj\\",
+      "outputPath": "E:\\git\\repo\\CDP_Dev\\CDP.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",

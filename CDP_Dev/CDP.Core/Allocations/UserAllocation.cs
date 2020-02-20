@@ -15,6 +15,8 @@ namespace CDP.Core.Allocations
         public int AllocationId { get; set; }
         public string Allocation { get; set; }
         public string Comment { get; set; }
+        public int PriorityId { get; set; }
+        public string Priority { get; set; }
         public DateTime? CreatedOn { get; set; }
         public DateTime? LastUpdated { get; set; }
     }

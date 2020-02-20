@@ -1,0 +1,110 @@
+﻿@model CDP.Core.Reports.ReportUserMentor
+
+@{
+    ViewData["Title"] = "Mark User Mentor";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<h3>Mark User Mentor</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="MarkUserMentor">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="User" class="control-label"></label>
+                <select asp-for="UserId" class="form-control" asp-items="@(new SelectList(@ViewBag.UserList,"Id", "Name"))"></select>
+                <span asp-validation-for="User" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserMentor" class="control-label"></label>
+                <select asp-for="UserMentorId" class="form-control"></select>
+                <span asp-validation-for="UserMentor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comment" class="control-label"></label>
+                <input asp-for="Comment" class="form-control" />
+                <span asp-validation-for="Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Period" class="control-label"></label>
+                <select asp-for="PeriodId" class="form-control" ></select>
+                <span asp-validation-for="Period" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <div id="status">
+                    @foreach (var status in @ViewBag.StatusList)
+                    {
+                        <label class="radio-inline"><input class="radio-inline" type="radio" asp-for="StatusId" value="@status.Id" />@status.Name</label>
+                    }
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Mark" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var UserId = localStorage.getItem("UserId");
+        if (UserId != null) {
+            $("#UserId").val(UserId);
+        }
+        LoadUserMentorData($("#UserId").val());
+        $("#UserId").change(function () {
+            $("#PeriodId").empty();
+            var Id = $("#UserId").val();
+            LoadUserMentorData(Id);
+            setUserIdForLink(Id);
+        });
+        $("#UserMentorId").change(function () {
+            var UserId = $("#UserId").val();
+            var UserInternalId = $("#InternalId").val();
+            LoadPeriod(UserId, UserInternalId);
+        });
+        function LoadUserMentorData(Id) {
+            $.ajax({
+                url: "/Mentor/LoadUserMentorData/" + Id,
+                cache: false,
+                type: "POST",
+                success: function (data) {
+                    var markup = "";
+                    for (var x = 0; x < data.data.length; x++) {
+                        markup += "<option value=" + data.data[x].Id + ">" + data.data[x].Mentor + "</option>";
+                    }
+                    $("#UserMentorId").html(markup).show();
+                    if (data.data.length > 0) {
+                        LoadPeriod($("#UserMentorId").val(), $("#UserId").val());
+                    }
+                },
+                error: function (reponse) {
+                    alert("error : " + reponse);
+                }
+            });
+        }
+
+        function LoadPeriod(Id, UserId) {
+            $.ajax({
+                url: "/Report/LoadNotMarkedMentorPeriod/" + Id + "?UserId=" + UserId,
+                cache: false,
+                type: "POST",
+                success: function (data) {
+                    var markup = "";
+                    for (var x = 0; x < data.length; x++) {
+                        markup += "<option value=" + data[x].Id + ">" + data[x].Name + "</option>";
+                    }
+                    $("#PeriodId").html(markup).show();
+                },
+                error: function (reponse) {
+                    alert("error : " + reponse);
+                }
+            });
+        }
+    });
+</script>

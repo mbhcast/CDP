@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\MBH\\Projects\\CDP_Dev\\Interface\\CDP.Service.csproj": {}
+    "E:\\git\\repo\\CDP_Dev\\Interface\\CDP.Service.csproj": {}
   },
   "projects": {
-    "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj": {
+    "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj",
+        "projectUniqueName": "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj",
         "projectName": "CDP.Core",
-        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj",
+        "projectPath": "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj",
         "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
-        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\obj\\",
+        "outputPath": "E:\\git\\repo\\CDP_Dev\\CDP.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,14 +63,14 @@
         }
       }
     },
-    "E:\\MBH\\Projects\\CDP_Dev\\Interface\\CDP.Service.csproj": {
+    "E:\\git\\repo\\CDP_Dev\\Interface\\CDP.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\Interface\\CDP.Service.csproj",
+        "projectUniqueName": "E:\\git\\repo\\CDP_Dev\\Interface\\CDP.Service.csproj",
         "projectName": "CDP.Service",
-        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\Interface\\CDP.Service.csproj",
+        "projectPath": "E:\\git\\repo\\CDP_Dev\\Interface\\CDP.Service.csproj",
         "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
-        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\Interface\\obj\\",
+        "outputPath": "E:\\git\\repo\\CDP_Dev\\Interface\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -86,8 +86,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj"
+              "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj"
               }
             }
           }

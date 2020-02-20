@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {}
+    "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {}
   },
   "projects": {
-    "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {
+    "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {
       "version": "3.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj",
+        "projectUniqueName": "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj",
         "projectName": "MigraDoc.DocumentObjectModel",
-        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj",
+        "projectPath": "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj",
         "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
-        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\obj\\",
+        "outputPath": "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",

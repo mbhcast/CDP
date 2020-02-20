@@ -1,0 +1,69 @@
+﻿@model CDP.Core.Allocations.UserAllocation
+
+@{
+    ViewData["Title"] = "Mark User Allocation";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<h3>Mark User Allocation</h3>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="MarkUserAllocation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="User" class="control-label"></label>
+                <select asp-for="UserId" class="form-control" asp-items="@(new SelectList(@ViewBag.UserList,"Id", "Name"))"></select>
+                <span asp-validation-for="User" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Allocation" class="control-label"></label>
+                <select asp-for="AllocationId" class="form-control"></select>
+                <span asp-validation-for="Allocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Period</label>
+                <select id="PeriodId" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var UserId = localStorage.getItem("UserId");
+        if (UserId != null) {
+            $("#UserId").val(UserId);
+        }
+        //LoadData($("#UserId").val());
+        $("#UserId").change(function () {
+            var Id = $("#UserId").val();
+            //LoadData(Id);
+            setUserIdForLink(Id);
+        });
+
+        function LoadData(Id) {
+            $.ajax({
+                url: "/Allocation/LoadUserAllocationNotMapped/" + Id,
+                cache: false,
+                type: "POST",
+                success: function (data) {
+                    var markup = "";
+                    for (var x = 0; x < data.length; x++) {
+                        markup += "<option value=" + data[x].Id + ">" + data[x].Name + "</option>";
+                    }
+                    $("#AllocationId").html(markup).show();
+                },
+                error: function (reponse) {
+                    alert("error : " + reponse);
+                }
+            });
+        }
+    });
+</script>
