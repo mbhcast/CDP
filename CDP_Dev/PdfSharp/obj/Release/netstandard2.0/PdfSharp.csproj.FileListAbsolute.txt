@@ -18,3 +18,13 @@ E:\MBH\Projects\CDP_Dev\PdfSharp\obj\Release\netstandard2.0\PdfSharp.AssemblyInf
 E:\MBH\Projects\CDP_Dev\PdfSharp\obj\Release\netstandard2.0\PdfSharp.AssemblyInfo.cs
 E:\MBH\Projects\CDP_Dev\PdfSharp\obj\Release\netstandard2.0\PdfSharp.dll
 E:\MBH\Projects\CDP_Dev\PdfSharp\obj\Release\netstandard2.0\PdfSharp.pdb
+E:\git\repo\CDP_Dev\PdfSharp\bin\Release\netstandard2.0\PdfSharp.deps.json
+E:\git\repo\CDP_Dev\PdfSharp\bin\Release\netstandard2.0\PdfSharp.dll
+E:\git\repo\CDP_Dev\PdfSharp\bin\Release\netstandard2.0\PdfSharp.pdb
+E:\git\repo\CDP_Dev\PdfSharp\obj\Release\netstandard2.0\PdfSharp.csprojAssemblyReference.cache
+E:\git\repo\CDP_Dev\PdfSharp\obj\Release\netstandard2.0\PdfSharp.Forms.PagePreview.resources
+E:\git\repo\CDP_Dev\PdfSharp\obj\Release\netstandard2.0\PdfSharp.csproj.GenerateResource.cache
+E:\git\repo\CDP_Dev\PdfSharp\obj\Release\netstandard2.0\PdfSharp.AssemblyInfoInputs.cache
+E:\git\repo\CDP_Dev\PdfSharp\obj\Release\netstandard2.0\PdfSharp.AssemblyInfo.cs
+E:\git\repo\CDP_Dev\PdfSharp\obj\Release\netstandard2.0\PdfSharp.dll
+E:\git\repo\CDP_Dev\PdfSharp\obj\Release\netstandard2.0\PdfSharp.pdb

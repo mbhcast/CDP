@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\MBH\\Projects\\CDP_Dev\\CDP_Dev\\CDP_Dev.csproj": {}
+    "E:\\git\\repo\\CDP_Dev\\CDP_Dev\\CDP_Dev.csproj": {}
   },
   "projects": {
-    "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj": {
+    "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj",
+        "projectUniqueName": "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj",
         "projectName": "CDP.Core",
-        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj",
+        "projectPath": "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj",
         "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
-        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\obj\\",
+        "outputPath": "E:\\git\\repo\\CDP_Dev\\CDP.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -68,14 +68,14 @@
         }
       }
     },
-    "E:\\MBH\\Projects\\CDP_Dev\\CDP.Data\\CDP.Data.csproj": {
+    "E:\\git\\repo\\CDP_Dev\\CDP.Data\\CDP.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Data\\CDP.Data.csproj",
+        "projectUniqueName": "E:\\git\\repo\\CDP_Dev\\CDP.Data\\CDP.Data.csproj",
         "projectName": "CDP.Data",
-        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Data\\CDP.Data.csproj",
+        "projectPath": "E:\\git\\repo\\CDP_Dev\\CDP.Data\\CDP.Data.csproj",
         "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
-        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Data\\obj\\",
+        "outputPath": "E:\\git\\repo\\CDP_Dev\\CDP.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -91,11 +91,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj"
+              "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj"
               },
-              "E:\\MBH\\Projects\\CDP_Dev\\Interface\\CDP.Service.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\Interface\\CDP.Service.csproj"
+              "E:\\git\\repo\\CDP_Dev\\Interface\\CDP.Service.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\Interface\\CDP.Service.csproj"
               }
             }
           }
@@ -147,14 +147,14 @@
         }
       }
     },
-    "E:\\MBH\\Projects\\CDP_Dev\\CDP_Dev\\CDP_Dev.csproj": {
+    "E:\\git\\repo\\CDP_Dev\\CDP_Dev\\CDP_Dev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\CDP_Dev\\CDP_Dev.csproj",
+        "projectUniqueName": "E:\\git\\repo\\CDP_Dev\\CDP_Dev\\CDP_Dev.csproj",
         "projectName": "CDP_Dev",
-        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP_Dev\\CDP_Dev.csproj",
+        "projectPath": "E:\\git\\repo\\CDP_Dev\\CDP_Dev\\CDP_Dev.csproj",
         "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
-        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP_Dev\\obj\\publish\\win-x64\\",
+        "outputPath": "E:\\git\\repo\\CDP_Dev\\CDP_Dev\\obj\\publish\\win-x64\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -170,26 +170,26 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj"
+              "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj"
               },
-              "E:\\MBH\\Projects\\CDP_Dev\\CDP.Data\\CDP.Data.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Data\\CDP.Data.csproj"
+              "E:\\git\\repo\\CDP_Dev\\CDP.Data\\CDP.Data.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\CDP.Data\\CDP.Data.csproj"
               },
-              "E:\\MBH\\Projects\\CDP_Dev\\Interface\\CDP.Service.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\Interface\\CDP.Service.csproj"
+              "E:\\git\\repo\\CDP_Dev\\Interface\\CDP.Service.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\Interface\\CDP.Service.csproj"
               },
-              "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj"
+              "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj"
               },
-              "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj"
+              "E:\\git\\repo\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj"
               },
-              "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj"
+              "E:\\git\\repo\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj"
               },
-              "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj"
+              "E:\\git\\repo\\CDP_Dev\\PdfSharp\\PdfSharp.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\PdfSharp\\PdfSharp.csproj"
               }
             }
           }
@@ -248,14 +248,14 @@
         }
       }
     },
-    "E:\\MBH\\Projects\\CDP_Dev\\Interface\\CDP.Service.csproj": {
+    "E:\\git\\repo\\CDP_Dev\\Interface\\CDP.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\Interface\\CDP.Service.csproj",
+        "projectUniqueName": "E:\\git\\repo\\CDP_Dev\\Interface\\CDP.Service.csproj",
         "projectName": "CDP.Service",
-        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\Interface\\CDP.Service.csproj",
+        "projectPath": "E:\\git\\repo\\CDP_Dev\\Interface\\CDP.Service.csproj",
         "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
-        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\Interface\\obj\\",
+        "outputPath": "E:\\git\\repo\\CDP_Dev\\Interface\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -271,8 +271,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\CDP.Core\\CDP.Core.csproj"
+              "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\CDP.Core\\CDP.Core.csproj"
               }
             }
           }
@@ -312,14 +312,14 @@
         }
       }
     },
-    "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {
+    "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {
       "version": "3.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj",
+        "projectUniqueName": "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj",
         "projectName": "MigraDoc.DocumentObjectModel",
-        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj",
+        "projectPath": "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj",
         "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
-        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\obj\\",
+        "outputPath": "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -376,14 +376,14 @@
         }
       }
     },
-    "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj": {
+    "E:\\git\\repo\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj": {
       "version": "3.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj",
+        "projectUniqueName": "E:\\git\\repo\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj",
         "projectName": "MigraDoc.Rendering",
-        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj",
+        "projectPath": "E:\\git\\repo\\CDP_Dev\\MigraDoc.Rendering\\MigraDoc.Rendering.csproj",
         "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
-        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.Rendering\\obj\\",
+        "outputPath": "E:\\git\\repo\\CDP_Dev\\MigraDoc.Rendering\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -399,14 +399,14 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj"
+              "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\MigraDoc.DocumentObjectModel\\MigraDoc.DocumentObjectModel.csproj"
               },
-              "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj"
+              "E:\\git\\repo\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj"
               },
-              "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj"
+              "E:\\git\\repo\\CDP_Dev\\PdfSharp\\PdfSharp.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\PdfSharp\\PdfSharp.csproj"
               }
             }
           }
@@ -450,14 +450,14 @@
         }
       }
     },
-    "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj": {
+    "E:\\git\\repo\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj": {
       "version": "3.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj",
+        "projectUniqueName": "E:\\git\\repo\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj",
         "projectName": "PdfSharp.Charting",
-        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj",
+        "projectPath": "E:\\git\\repo\\CDP_Dev\\PdfSharp.Charting\\PdfSharp.Charting.csproj",
         "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
-        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp.Charting\\obj\\",
+        "outputPath": "E:\\git\\repo\\CDP_Dev\\PdfSharp.Charting\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -473,8 +473,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj": {
-                "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj"
+              "E:\\git\\repo\\CDP_Dev\\PdfSharp\\PdfSharp.csproj": {
+                "projectPath": "E:\\git\\repo\\CDP_Dev\\PdfSharp\\PdfSharp.csproj"
               }
             }
           }
@@ -518,14 +518,14 @@
         }
       }
     },
-    "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj": {
+    "E:\\git\\repo\\CDP_Dev\\PdfSharp\\PdfSharp.csproj": {
       "version": "3.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj",
+        "projectUniqueName": "E:\\git\\repo\\CDP_Dev\\PdfSharp\\PdfSharp.csproj",
         "projectName": "PdfSharp",
-        "projectPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\PdfSharp.csproj",
+        "projectPath": "E:\\git\\repo\\CDP_Dev\\PdfSharp\\PdfSharp.csproj",
         "packagesPath": "C:\\Users\\MBH\\.nuget\\packages\\",
-        "outputPath": "E:\\MBH\\Projects\\CDP_Dev\\PdfSharp\\obj\\",
+        "outputPath": "E:\\git\\repo\\CDP_Dev\\PdfSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MBH\\AppData\\Roaming\\NuGet\\NuGet.Config",

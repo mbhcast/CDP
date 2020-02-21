@@ -20,3 +20,14 @@ E:\MBH\Projects\CDP_Dev\Interface\obj\Release\netstandard2.0\CDP.Service.Assembl
 E:\MBH\Projects\CDP_Dev\Interface\obj\Release\netstandard2.0\CDP.Service.csproj.CopyComplete
 E:\MBH\Projects\CDP_Dev\Interface\obj\Release\netstandard2.0\CDP.Service.dll
 E:\MBH\Projects\CDP_Dev\Interface\obj\Release\netstandard2.0\CDP.Service.pdb
+E:\git\repo\CDP_Dev\Interface\bin\Release\netstandard2.0\CDP.Service.deps.json
+E:\git\repo\CDP_Dev\Interface\bin\Release\netstandard2.0\CDP.Service.dll
+E:\git\repo\CDP_Dev\Interface\bin\Release\netstandard2.0\CDP.Service.pdb
+E:\git\repo\CDP_Dev\Interface\bin\Release\netstandard2.0\CDP.Core.dll
+E:\git\repo\CDP_Dev\Interface\bin\Release\netstandard2.0\CDP.Core.pdb
+E:\git\repo\CDP_Dev\Interface\obj\Release\netstandard2.0\CDP.Service.csprojAssemblyReference.cache
+E:\git\repo\CDP_Dev\Interface\obj\Release\netstandard2.0\CDP.Service.AssemblyInfoInputs.cache
+E:\git\repo\CDP_Dev\Interface\obj\Release\netstandard2.0\CDP.Service.AssemblyInfo.cs
+E:\git\repo\CDP_Dev\Interface\obj\Release\netstandard2.0\CDP.Service.csproj.CopyComplete
+E:\git\repo\CDP_Dev\Interface\obj\Release\netstandard2.0\CDP.Service.dll
+E:\git\repo\CDP_Dev\Interface\obj\Release\netstandard2.0\CDP.Service.pdb

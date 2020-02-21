@@ -119,10 +119,10 @@
                 { "data": "TrainingMode", "name": "TrainingMode", "autoWidth": true },
                 { "data": "Description", "name": "Description", "autoWidth": true },
                 {
-                    "render": function (data, type, row) { return '<a class="btn btn-warning" href="/Internal/Edit/' + row.Id + '">Edit</a>'; }
+                    "render": function (data, type, row) { return '<a class="btn btn-warning" href="/Internal/Edit/' + row.Id + '"><span class="glyphicon glyphicon-edit"></span></a>'; }
                 },
                 {
-                    "render": function (data, type, row) { return '<a class="btn btn-danger" href="/Internal/Delete/' + row.Id + '">Delete</a>'; }
+                    "render": function (data, type, row) { return '<a class="btn btn-danger" href="/Internal/Delete/' + row.Id + '"><span class="glyphicon glyphicon-remove"></span></a>'; }
                 },
             ]
         });

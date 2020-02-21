@@ -11,7 +11,7 @@
 <h2>User Mentor</h2>
 
 <p>
-    <a type="button" class="btn btn-success" asp-action="Create">Create New</a>
+    <a type="button" class="btn btn-success" asp-action="Create"><span class="glyphicon glyphicon-plus"></span> </a>
 </p>
 <div class="row">
     <div class="col-md-4">
@@ -168,10 +168,10 @@
                     { "data": "TrainingCategory", "name": "TrainingCategory", "autoWidth": true },
                     { "data": "Comment", "name": "Comment", "autoWidth": true },
                     {
-                        "render": function (data, type, row) { return '<a class="btn btn-warning" href="/Mentor/EditUserMentor/' + row.Id + '?UserId=' + $("#UserId").val() + '">Edit</a>'; }
+                        "render": function (data, type, row) { return '<a class="btn btn-warning" href="/Mentor/EditUserMentor/' + row.Id + '?UserId=' + $("#UserId").val() + '"><span class="glyphicon glyphicon-edit"></span></a>'; }
                     },
                     {
-                        "render": function (data, type, row) { return '<a class="btn btn-danger" href="/Mentor/DeleteUserMentor/' + row.Id + '">Delete</a>'; }
+                        "render": function (data, type, row) { return '<a class="btn btn-danger" href="/Mentor/DeleteUserMentor/' + row.Id + '"><span class="glyphicon glyphicon-remove"></span></a>'; }
                     },
                 ]
             });

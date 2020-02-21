@@ -23,7 +23,7 @@ namespace CDP.Data.Reports
             {
                 using (SqlConnection con = new SqlConnection(_ConnectionString.Value.ConnectionString))
                 {
-                    string sql = @"SELECT RUA.Id AS Id, A.Name AS UserAllocation, P.Name AS Period, S.Id AS StatusId, S.Name AS Status, S.Color, *FROM Report_UserAllocation RUA 
+                    string sql = @"SELECT RUA.Id AS Id, RUA.Comment AS Comment, A.Name AS UserAllocation, P.Name AS Period, S.Id AS StatusId, S.Name AS Status, S.Color FROM Report_UserAllocation RUA 
                                     LEFT JOIN Period P ON P.Id = RUA.PeriodId 
                                     LEFT JOIN User_Allocation UA ON UA.Id = RUA.UserAllocationId 
                                     LEFT JOIN Allocation A ON A.Id = UA.AllocationId 
@@ -48,7 +48,7 @@ namespace CDP.Data.Reports
             {
                 using (SqlConnection con = new SqlConnection(_ConnectionString.Value.ConnectionString))
                 {
-                    string sql = @"SELECT RUI.Id AS Id, I.Topic AS UserAllocation, P.Name AS Period, S.Id AS StatusId, S.Name AS Status, S.Color, *FROM Report_UserInternal RUI 
+                    string sql = @"SELECT RUI.Id AS Id, RUI.Comment AS Comment, I.Topic AS UserAllocation, P.Name AS Period, S.Id AS StatusId, S.Name AS Status, S.Color FROM Report_UserInternal RUI 
                                     LEFT JOIN Period P ON P.Id = RUI.PeriodId 
                                     LEFT JOIN User_Internal UI ON UI.Id = RUI.UserInternalId 
                                     LEFT JOIN Internal I ON I.Id = UI.InternalId 
@@ -73,7 +73,7 @@ namespace CDP.Data.Reports
             {
                 using (SqlConnection con = new SqlConnection(_ConnectionString.Value.ConnectionString))
                 {
-                    string sql = @"SELECT RUM.Id AS Id, U.Name AS UserMentor, P.Name AS Period, S.Id AS StatusId, S.Name AS Status, S.Color, *FROM Report_UserMentor RUM 
+                    string sql = @"SELECT RUM.Id AS Id, RUM.Comment AS Comment, U.Name AS UserMentor, P.Name AS Period, S.Id AS StatusId, S.Name AS Status, S.Color FROM Report_UserMentor RUM 
                                     LEFT JOIN Period P ON P.Id = RUM.PeriodId 
                                     LEFT JOIN User_Mentor UM ON UM.Id = RUM.UserMentorId 
                                     LEFT JOIN Users U ON U.Id = UM.MentorId 

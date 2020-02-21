@@ -6,3 +6,11 @@ E:\MBH\Projects\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Release\netstandard2.0\
 E:\MBH\Projects\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Release\netstandard2.0\MigraDoc.DocumentObjectModel.dll
 E:\MBH\Projects\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Release\netstandard2.0\MigraDoc.DocumentObjectModel.pdb
 E:\MBH\Projects\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Release\netstandard2.0\MigraDoc.DocumentObjectModel.csprojAssemblyReference.cache
+E:\git\repo\CDP_Dev\MigraDoc.DocumentObjectModel\bin\Release\netstandard2.0\MigraDoc.DocumentObjectModel.deps.json
+E:\git\repo\CDP_Dev\MigraDoc.DocumentObjectModel\bin\Release\netstandard2.0\MigraDoc.DocumentObjectModel.dll
+E:\git\repo\CDP_Dev\MigraDoc.DocumentObjectModel\bin\Release\netstandard2.0\MigraDoc.DocumentObjectModel.pdb
+E:\git\repo\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Release\netstandard2.0\MigraDoc.DocumentObjectModel.csprojAssemblyReference.cache
+E:\git\repo\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Release\netstandard2.0\MigraDoc.DocumentObjectModel.AssemblyInfoInputs.cache
+E:\git\repo\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Release\netstandard2.0\MigraDoc.DocumentObjectModel.AssemblyInfo.cs
+E:\git\repo\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Release\netstandard2.0\MigraDoc.DocumentObjectModel.dll
+E:\git\repo\CDP_Dev\MigraDoc.DocumentObjectModel\obj\Release\netstandard2.0\MigraDoc.DocumentObjectModel.pdb

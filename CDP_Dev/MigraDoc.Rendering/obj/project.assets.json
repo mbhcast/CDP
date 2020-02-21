@@ -75,6 +75,81 @@
           "bin/placeholder/PdfSharp.Charting.dll": {}
         }
       }
+    },
+    ".NETStandard,Version=v2.0/win-x64": {
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NETStandard.Library/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "System.Drawing.Common/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Drawing.Common.dll": {}
+        }
+      },
+      "MigraDoc.DocumentObjectModel/3.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.Drawing.Common": "4.5.0"
+        },
+        "compile": {
+          "bin/placeholder/MigraDoc.DocumentObjectModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MigraDoc.DocumentObjectModel.dll": {}
+        }
+      },
+      "PdfSharp/3.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.Drawing.Common": "4.5.0"
+        },
+        "compile": {
+          "bin/placeholder/PdfSharp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PdfSharp.dll": {}
+        }
+      },
+      "PdfSharp.Charting/3.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "PdfSharp": "3.0.0",
+          "System.Drawing.Common": "4.5.0"
+        },
+        "compile": {
+          "bin/placeholder/PdfSharp.Charting.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PdfSharp.Charting.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -349,6 +424,11 @@
         "assetTargetFallback": true,
         "warn": true,
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
       }
     }
   }

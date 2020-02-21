@@ -9,7 +9,9 @@
 <h2>Employee List</h2>
 
 <p>
-    <a type="button" class="btn btn-success" asp-action="Create">Add New User</a>
+    <a type="button" class="btn btn-success" asp-action="Create">
+        <span class="glyphicon glyphicon-plus"></span> 
+    </a>
 </p>
 <div class="container">
     <br />
@@ -66,10 +68,10 @@
                     { "data": "Manager", "name": "Manager", "autoWidth": true },
                     { "data": "Email", "name": "Email", "autoWidth": true },
                     {
-                        "render": function (data, type, row) { return '<a class="btn btn-warning" href="/User/Edit/' + row.Id + '">Edit</a>'; }
+                        "render": function (data, type, row) { return '<a class="btn btn-warning" href="/User/Edit/' + row.Id + '"><span class="glyphicon glyphicon-edit"></span></a>'; }
                     },
                     {
-                        "render": function (data, type, row) { return '<a class="btn btn-danger" href="/User/Delete/' + row.Id + '">Delete</a>'; }
+                        "render": function (data, type, row) { return '<a class="btn btn-danger" href="/User/Delete/' + row.Id + '"><span class="glyphicon glyphicon-remove"></span></a>'; }
                     },
                 ]
             });

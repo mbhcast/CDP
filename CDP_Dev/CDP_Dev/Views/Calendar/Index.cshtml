@@ -83,7 +83,7 @@
                 vHTML += '<div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input" value="">' + event.attendees[x].attendee + '</label></div>';
             }
             $("#AttendenceAttendeeId").html(markup).show();
-            $("#chkpresent").html(vHTML).show();
+            //$("#chkpresent").html(vHTML).show();
             $("#AttendenceAttendeeId").focus();
             $('#event-modal-attendance').modal();
         }
@@ -535,21 +535,11 @@
                             <select id="AttendenceAttendeeId" multiple class="form-control"> </select>
                         </div>
                     </div>
-                    <div class="form-group">
+                    @*<div class="form-group">
                         <label class="col-sm-4 control-label">Select Present Attendees</label>
                         <div class="col-sm-7" id="chkpresent">
-                            @*<div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="">Option 1
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="">Option 2
-                                </label>
-                            </div>*@
                         </div>
-                    </div>
+                    </div>*@
                 </form>
             </div>
             <div class="modal-footer">

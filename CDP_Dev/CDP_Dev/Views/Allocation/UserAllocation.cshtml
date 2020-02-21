@@ -10,8 +10,8 @@
 <h2>User Allocation List</h2>
 
 <p>
-    <a type="button" class="btn btn-success" asp-action="CreateUserAllocation">Create New</a>
-    <a type="button" class="btn btn-info" asp-action="List">Allocation List</a>
+    <a type="button" class="btn btn-success" asp-action="CreateUserAllocation"><span class="glyphicon glyphicon-plus"></span> </a>
+    <a type="button" class="btn btn-info" asp-action="List"><span class="glyphicon glyphicon-list"></span> </a>
 </p>
 <div class="row">
     <div class="col-md-4">
@@ -154,10 +154,10 @@
                     { "data": "Comment", "name": "Comment", "autoWidth": true },
                     { "data": "Priority", "name": "Priority", "autoWidth": true },
                     {
-                        "render": function (data, type, row) { return '<a class="btn btn-warning" href="/Allocation/EditUserAllocation/' + row.Id + '">Edit</a>'; }
+                        "render": function (data, type, row) { return '<a class="btn btn-warning" href="/Allocation/EditUserAllocation/' + row.Id + '"><span class="glyphicon glyphicon-edit"></span></a>'; }
                     },
                     {
-                        "render": function (data, type, row) { return '<a class="btn btn-danger" href="/Allocation/DeleteUserAllocation/' + row.Id + '">Delete</a>'; }
+                        "render": function (data, type, row) { return '<a class="btn btn-danger" href="/Allocation/DeleteUserAllocation/' + row.Id + '"><span class="glyphicon glyphicon-remove"></span></a>'; }
                     },
                 ]
             });

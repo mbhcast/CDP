@@ -7,13 +7,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
 <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
-
+@*<style type="text/css">
+    .btn{
+        padding: 1px 6px !important;
+    }
+</style>*@
 <h3>Training List</h3>
 
 <p>
-    <a type="button" class="btn btn-success" asp-action="CreateTrainingMaster">Create New Training</a>
-    <a type="button" class="btn btn-success" asp-action="Create">Create New Training Category</a>
-    <a type="button" class="btn btn-info" asp-action="Index">Training Category List</a>
+    <a type="button" class="btn btn-success" asp-action="CreateTrainingMaster">
+        <span class="glyphicon glyphicon-plus"></span> Training
+    </a>
+    <a type="button" class="btn btn-success" asp-action="Create">
+        <span class="glyphicon glyphicon-plus"></span> Training Category
+    </a>
+    <a type="button" class="btn btn-info" asp-action="Index">
+        <span class="glyphicon glyphicon-list"></span> Training Category
+    </a>
 </p>
 <div class="container">
     <br />
@@ -131,11 +141,11 @@
                 { "data": "IsExternal", "name": "IsExternal", "autoWidth": true },
                 {  
                         "render": function (data, type, row)  
-                        { return '<a class="btn btn-warning" href="/Training/EditTrainingMaster/' + row.Id + '">Edit</a>'; }  
+                        { return '<a class="btn btn-warning" href="/Training/EditTrainingMaster/' + row.Id + '"><span class="glyphicon glyphicon-edit"></span></a>'; }  
                 },
                 {  
                         "render": function (data, type, row)  
-                        { return '<a class="btn btn-danger" href="/Training/DeleteTrainingMaster/' + row.Id + '">Delete</a>'; }
+                        { return '<a class="btn btn-danger" href="/Training/DeleteTrainingMaster/' + row.Id + '"><span class="glyphicon glyphicon-remove"></span></a>'; }
                 }, 
             ]
         });

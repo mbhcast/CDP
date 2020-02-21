@@ -6,9 +6,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
 <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
-<h2>List</h2>
+<h2>External List</h2>
 <p>
-    <a type="button" class="btn btn-success" asp-action="CreateExPre">Create New</a>
+    <a type="button" class="btn btn-success" asp-action="CreateExPre">
+        <span class="glyphicon glyphicon-plus"></span> 
+    </a>
 </p>
 <div class="container">
     <br />
@@ -65,10 +67,10 @@
                 { "data": "IsExternal", "name": "IsExternal", "autoWidth": true },
                 { "data": "IsPresenter", "name": "IsPresenter", "autoWidth": true },
                 {
-                    "render": function (data, type, row) { return '<a class="btn btn-warning" href="/User/EditExPre/' + row.Id + '">Edit</a>'; }
+                    "render": function (data, type, row) { return '<a class="btn btn-warning" href="/User/EditExPre/' + row.Id + '"><span class="glyphicon glyphicon-edit"></span></a>'; }
                 },
                 {
-                    "render": function (data, type, row) { return '<a class="btn btn-danger" href="/User/DeleteExPre/' + row.Id + '">Delete</a>'; }
+                    "render": function (data, type, row) { return '<a class="btn btn-danger" href="/User/DeleteExPre/' + row.Id + '"><span class="glyphicon glyphicon-remove"></span></a>'; }
                 },
             ]
         });

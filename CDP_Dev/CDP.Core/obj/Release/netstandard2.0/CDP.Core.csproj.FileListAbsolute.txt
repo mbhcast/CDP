@@ -14,3 +14,11 @@ E:\MBH\Projects\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.AssemblyInf
 E:\MBH\Projects\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.AssemblyInfo.cs
 E:\MBH\Projects\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.dll
 E:\MBH\Projects\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.pdb
+E:\git\repo\CDP_Dev\CDP.Core\bin\Release\netstandard2.0\CDP.Core.deps.json
+E:\git\repo\CDP_Dev\CDP.Core\bin\Release\netstandard2.0\CDP.Core.dll
+E:\git\repo\CDP_Dev\CDP.Core\bin\Release\netstandard2.0\CDP.Core.pdb
+E:\git\repo\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.csprojAssemblyReference.cache
+E:\git\repo\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.AssemblyInfoInputs.cache
+E:\git\repo\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.AssemblyInfo.cs
+E:\git\repo\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.dll
+E:\git\repo\CDP_Dev\CDP.Core\obj\Release\netstandard2.0\CDP.Core.pdb

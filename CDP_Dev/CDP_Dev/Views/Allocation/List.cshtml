@@ -102,10 +102,10 @@
                 { "data": "Id", "name": "Id", "autoWidth": true },
                 { "data": "Name", "name": "Name", "autoWidth": true },
                 {
-                    "render": function (data, type, row) { return '<a class="btn btn-warning" href="/Allocation/Edit/' + row.Id + '">Edit</a>'; }
+                    "render": function (data, type, row) { return '<a class="btn btn-warning" href="/Allocation/Edit/' + row.Id + '"><span class="glyphicon glyphicon-edit"></span></a>'; }
                 },
                 {
-                    "render": function (data, type, row) { return '<a class="btn btn-danger" href="/Allocation/Delete/' + row.Id + '">Delete</a>'; }
+                    "render": function (data, type, row) { return '<a class="btn btn-danger" href="/Allocation/Delete/' + row.Id + '"><span class="glyphicon glyphicon-remove"></span></a>'; }
                 },
             ]
         });
