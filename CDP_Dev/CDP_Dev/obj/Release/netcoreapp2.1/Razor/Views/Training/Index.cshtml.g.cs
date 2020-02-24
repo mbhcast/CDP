@@ -74,7 +74,7 @@ using CDP_Dev.Models;
     ");
             EndContext();
             BeginContext(538, 93, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "05db2b4e38e04f7d9fe99ab1889c05e8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b0b7fcf8048a4e20933ec307fd85b503", async() => {
                 BeginContext(599, 28, true);
                 WriteLiteral("Create New Training Category");
                 EndContext();

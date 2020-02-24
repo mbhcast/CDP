@@ -75,7 +75,7 @@ using CDP_Dev.Models;
             WriteLiteral("<h3>Training List</h3>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(541, 150, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e67bc5a75a0a4a51a0f1b294ffe797dc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "31700f04c2634b7aa4f026e51dafe65c", async() => {
                 BeginContext(616, 71, true);
                 WriteLiteral("\r\n        <span class=\"glyphicon glyphicon-plus\"></span> Training\r\n    ");
                 EndContext();
@@ -99,7 +99,7 @@ using CDP_Dev.Models;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(697, 145, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d305555b3d514d949e4ff88ed0d9b2a3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c9bb2dfe8142467eabcef4805f646e2e", async() => {
                 BeginContext(758, 80, true);
                 WriteLiteral("\r\n        <span class=\"glyphicon glyphicon-plus\"></span> Training Category\r\n    ");
                 EndContext();
@@ -123,7 +123,7 @@ using CDP_Dev.Models;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(848, 141, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "275ec07e5dae46b3b7b3ac22d8f63df4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "171d9af2b7f54cd7b6217999237f437f", async() => {
                 BeginContext(905, 80, true);
                 WriteLiteral("\r\n        <span class=\"glyphicon glyphicon-list\"></span> Training Category\r\n    ");
                 EndContext();

@@ -24,16 +24,3 @@ E:\MBH\Projects\CDP_Dev\CDP.Data\obj\Debug\netstandard2.0\CDP.Data.AssemblyInfo.
 E:\MBH\Projects\CDP_Dev\CDP.Data\obj\Debug\netstandard2.0\CDP.Data.csproj.CopyComplete
 E:\MBH\Projects\CDP_Dev\CDP.Data\obj\Debug\netstandard2.0\CDP.Data.dll
 E:\MBH\Projects\CDP_Dev\CDP.Data\obj\Debug\netstandard2.0\CDP.Data.pdb
-E:\git\repo\CDP_Dev\CDP.Data\bin\Debug\netstandard2.0\CDP.Data.deps.json
-E:\git\repo\CDP_Dev\CDP.Data\bin\Debug\netstandard2.0\CDP.Data.dll
-E:\git\repo\CDP_Dev\CDP.Data\bin\Debug\netstandard2.0\CDP.Data.pdb
-E:\git\repo\CDP_Dev\CDP.Data\bin\Debug\netstandard2.0\CDP.Core.dll
-E:\git\repo\CDP_Dev\CDP.Data\bin\Debug\netstandard2.0\CDP.Service.dll
-E:\git\repo\CDP_Dev\CDP.Data\bin\Debug\netstandard2.0\CDP.Core.pdb
-E:\git\repo\CDP_Dev\CDP.Data\bin\Debug\netstandard2.0\CDP.Service.pdb
-E:\git\repo\CDP_Dev\CDP.Data\obj\Debug\netstandard2.0\CDP.Data.csprojAssemblyReference.cache
-E:\git\repo\CDP_Dev\CDP.Data\obj\Debug\netstandard2.0\CDP.Data.AssemblyInfoInputs.cache
-E:\git\repo\CDP_Dev\CDP.Data\obj\Debug\netstandard2.0\CDP.Data.AssemblyInfo.cs
-E:\git\repo\CDP_Dev\CDP.Data\obj\Debug\netstandard2.0\CDP.Data.csproj.CopyComplete
-E:\git\repo\CDP_Dev\CDP.Data\obj\Debug\netstandard2.0\CDP.Data.dll
-E:\git\repo\CDP_Dev\CDP.Data\obj\Debug\netstandard2.0\CDP.Data.pdb

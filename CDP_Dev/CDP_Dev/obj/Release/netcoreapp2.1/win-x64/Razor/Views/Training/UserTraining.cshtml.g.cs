@@ -76,7 +76,7 @@ using CDP_Dev.Models;
             WriteLiteral("<h2>User Training</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(540, 151, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9c3c6ffe105a4234afa30a3830fa5652", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8109f09b423640e08dee30918120084c", async() => {
                 BeginContext(625, 62, true);
                 WriteLiteral("\r\n        <span class=\"glyphicon glyphicon-plus\"></span>\r\n    ");
                 EndContext();
@@ -101,7 +101,7 @@ using CDP_Dev.Models;
             WriteLiteral("\r\n</p>\r\n<div class=\"row\">\r\n    <div class=\"col-md-4\">\r\n            <div class=\"form-group\">\r\n                <label  class=\"control-label\"></label>\r\n                ");
             EndContext();
             BeginContext(856, 120, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5cfe4a39e6594b8a941369142af89f02", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b25e9d1360fc4f1dab275b5f5a0bdbba", async() => {
                 BeginContext(966, 1, true);
                 WriteLiteral(" ");
                 EndContext();

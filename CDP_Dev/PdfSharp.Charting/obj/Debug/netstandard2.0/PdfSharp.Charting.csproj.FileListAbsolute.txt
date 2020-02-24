@@ -31,14 +31,3 @@ E:\MBH\Projects\CDP_Dev\PdfSharp.Charting\obj\Debug\netstandard2.0\PdfSharp.Char
 E:\MBH\Projects\CDP_Dev\PdfSharp.Charting\obj\Debug\netstandard2.0\PdfSharp.Charting.csproj.CopyComplete
 E:\MBH\Projects\CDP_Dev\PdfSharp.Charting\obj\Debug\netstandard2.0\PdfSharp.Charting.dll
 E:\MBH\Projects\CDP_Dev\PdfSharp.Charting\obj\Debug\netstandard2.0\PdfSharp.Charting.pdb
-E:\git\repo\CDP_Dev\PdfSharp.Charting\bin\Debug\netstandard2.0\PdfSharp.Charting.deps.json
-E:\git\repo\CDP_Dev\PdfSharp.Charting\bin\Debug\netstandard2.0\PdfSharp.Charting.dll
-E:\git\repo\CDP_Dev\PdfSharp.Charting\bin\Debug\netstandard2.0\PdfSharp.Charting.pdb
-E:\git\repo\CDP_Dev\PdfSharp.Charting\bin\Debug\netstandard2.0\PdfSharp.dll
-E:\git\repo\CDP_Dev\PdfSharp.Charting\bin\Debug\netstandard2.0\PdfSharp.pdb
-E:\git\repo\CDP_Dev\PdfSharp.Charting\obj\Debug\netstandard2.0\PdfSharp.Charting.csprojAssemblyReference.cache
-E:\git\repo\CDP_Dev\PdfSharp.Charting\obj\Debug\netstandard2.0\PdfSharp.Charting.AssemblyInfoInputs.cache
-E:\git\repo\CDP_Dev\PdfSharp.Charting\obj\Debug\netstandard2.0\PdfSharp.Charting.AssemblyInfo.cs
-E:\git\repo\CDP_Dev\PdfSharp.Charting\obj\Debug\netstandard2.0\PdfSharp.Charting.csproj.CopyComplete
-E:\git\repo\CDP_Dev\PdfSharp.Charting\obj\Debug\netstandard2.0\PdfSharp.Charting.dll
-E:\git\repo\CDP_Dev\PdfSharp.Charting\obj\Debug\netstandard2.0\PdfSharp.Charting.pdb
