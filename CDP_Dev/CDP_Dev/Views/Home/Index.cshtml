@@ -222,11 +222,12 @@
             </table>
         </div>
     </div>
+    <br />
     <div class="row">
         @*<input type="button"
             value="Generetae PDF"
             onclick="location.href='@Url.Action("CreatePdf", "Home", new { id = 10})'" />*@
-        <a id="GeneratePDF" href="@Url.Action("CreateMigraDocPdf", "Home", new { id = 0})" target="_blank">Generate PDF</a>
+        <a class="btn btn-default" id="GeneratePDF" href="@Url.Action("CreateMigraDocPdf", "Home", new { id = 0})" target="_blank"><span style="color:#ff0000" class="glyphicon glyphicon-file"></span> Generate PDF</a>
     </div>
 </div>
 <script type="text/javascript">

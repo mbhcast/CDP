@@ -53,10 +53,10 @@ namespace CDP_Dev.Controllers
         public IActionResult EditUserInternal(int Id)
         {
             
-            var userAllocation = _IInternal.GetSingleUserInternal(Id);
+            var userInternal = _IInternal.GetSingleUserInternal(Id);
             ViewBag.InternalList = _IInternal.GetInternalList();
             //ViewBag.AllocationList = _IInternal.GetAllocationList();
-            return View(userAllocation);
+            return View(userInternal);
         }
         public IActionResult UserInternal()
         {

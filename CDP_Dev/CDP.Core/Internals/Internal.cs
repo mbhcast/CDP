@@ -10,6 +10,7 @@ namespace CDP.Core.Internals
         public int Id { get; set; }
         [Required(ErrorMessage = "Enter Topic")]
         public string Topic { get; set; }
+        public string Name { get; set; }
         [Required(ErrorMessage = "Enter Training Mode")]
         public string TrainingMode { get; set; }
         [Required(ErrorMessage = "Enter Description")]

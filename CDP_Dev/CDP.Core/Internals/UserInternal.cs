@@ -12,6 +12,7 @@ namespace CDP.Core.Internals
         public int UserId { get; set; }
         public string User { get; set; }
         public int InternalId { get; set; }
+        public string Internal { get; set; }
         public string Topic { get; set; }
         public string TrainingMode { get; set; }
         public string Description { get; set; }

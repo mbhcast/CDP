@@ -1,61 +1,25 @@
 ﻿@model CDP.Core.Internals.UserInternal
 
 @{
-    ViewData["Title"] = "EditUserInternal";
+    ViewData["Title"] = "Edit User Internal";
 }
 
-<h2>Edit User Internal</h2>
+<h3>Edit User Internal</h3>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="EditUserInternal">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            @*<div class="form-group">
-                <label asp-for="Id" class="control-label"></label>
-                <input asp-for="Id" class="form-control" />
-                <span asp-validation-for="Id" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UserId" class="control-label"></label>
-                <input asp-for="UserId" class="form-control" />
-                <span asp-validation-for="UserId" class="text-danger"></span>
-            </div>*@
             <div class="form-group">
                 <label asp-for="User" class="control-label"></label>
-                <input asp-for="User" class="form-control" readonly/>
+                <input asp-for="User" class="form-control" readonly />
                 <span asp-validation-for="User" class="text-danger"></span>
             </div>
-            @*<div class="form-group">
-                <label asp-for="InternalId" class="control-label"></label>
-                <input asp-for="InternalId" class="form-control" />
-                <span asp-validation-for="InternalId" class="text-danger"></span>
-            </div>*@
             <div class="form-group">
-                <label asp-for="Topic" class="control-label"></label>
-                @*<input asp-for="Topic" class="form-control" />*@
-                <select asp-for="InternalId" class="form-control" asp-items="@(new SelectList(@ViewBag.InternalList,"Id", "Topic"))"/>
-                <span asp-validation-for="Topic" class="text-danger"></span>
+                <label asp-for="Internal" class="control-label"></label>
+                <select asp-for="InternalId" class="form-control" asp-items="@(new SelectList(@ViewBag.InternalList,"Id", "Name"))" />
+                <span asp-validation-for="Internal" class="text-danger"></span>
             </div>
-            @*<div class="form-group">
-                <label asp-for="TrainingMode" class="control-label"></label>
-                <input asp-for="TrainingMode" class="form-control" />
-                <span asp-validation-for="TrainingMode" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>*@
-            @*<div class="form-group">
-                <label asp-for="CreatedOn" class="control-label"></label>
-                <input asp-for="CreatedOn" class="form-control" />
-                <span asp-validation-for="CreatedOn" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastUpdated" class="control-label"></label>
-                <input asp-for="LastUpdated" class="form-control" />
-                <span asp-validation-for="LastUpdated" class="text-danger"></span>
-            </div>*@
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-warning" />
             </div>

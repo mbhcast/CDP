@@ -99,7 +99,7 @@ using CDP_Dev.Models;
             WriteLiteral("nt;\r\n    }*/\r\n</style>\r\n<h3>Reports</h3>\r\n<p>\r\n    ");
             EndContext();
             BeginContext(1116, 137, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fed967143d42455381ba30f527d2227c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d34e9cba7d641f7a25f5008e171069a", async() => {
                 BeginContext(1186, 63, true);
                 WriteLiteral("<span class=\"glyphicon glyphicon-check\"></span> User Allocation");
                 EndContext();
@@ -123,7 +123,7 @@ using CDP_Dev.Models;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(1259, 133, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f9bd99e9b0ee456ab005a010dc3319f2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "63a4ce31e629484791a2fc08a40bfad9", async() => {
                 BeginContext(1327, 61, true);
                 WriteLiteral("<span class=\"glyphicon glyphicon-check\"></span> User Internal");
                 EndContext();
@@ -147,7 +147,7 @@ using CDP_Dev.Models;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(1398, 129, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c429e06d8dec4a2a91795ca43ee0ebfb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6b9f2923fa9c4099b28be61344a8da84", async() => {
                 BeginContext(1464, 59, true);
                 WriteLiteral("<span class=\"glyphicon glyphicon-check\"></span> User Mentor");
                 EndContext();
@@ -171,7 +171,7 @@ using CDP_Dev.Models;
             WriteLiteral("\r\n</p>\r\n<div class=\"row\">\r\n    <div class=\"col-md-4\">\r\n        <div class=\"form-group\">\r\n            <label class=\"control-label\"></label>\r\n            ");
             EndContext();
             BeginContext(1679, 120, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fcfefef30d0945948174e697cfe94ace", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f74b880996e74a9dbe2e007463ea3e3e", async() => {
                 BeginContext(1789, 1, true);
                 WriteLiteral(" ");
                 EndContext();

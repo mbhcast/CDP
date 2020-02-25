@@ -152,7 +152,9 @@ namespace CDP.Data.Users
                 }
                 else if (Option == 4)
                 {
-                    sql = @"SELECT * FROM Users WHERE IsExternal = 0;";
+                    sql = @"SELECT U1.*,U2.DisplayName As Manager FROM Users U1 
+                            LEFT JOIN Users U2 ON U2.Id = U1.ManagerId 
+                            WHERE U1.IsExternal = 0;";
                 }
                 else
                 {
