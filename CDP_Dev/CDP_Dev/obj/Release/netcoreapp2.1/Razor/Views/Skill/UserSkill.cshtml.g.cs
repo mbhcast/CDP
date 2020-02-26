@@ -76,7 +76,7 @@ using CDP_Dev.Models;
     ");
             EndContext();
             BeginContext(435, 80, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2ddf699d6f344c59aa694224775640b6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2b7945c38e6c4a3684c8b7eb1d08abc7", async() => {
                 BeginContext(501, 10, true);
                 WriteLiteral("Create New");
                 EndContext();
@@ -100,7 +100,7 @@ using CDP_Dev.Models;
             WriteLiteral("\r\n</p>\r\n<div class=\"row\">\r\n    <div class=\"col-md-4\">\r\n        <div class=\"form-group\">\r\n            <label class=\"control-label\"></label>\r\n            ");
             EndContext();
             BeginContext(667, 120, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2c2050da1a604d3bafb2a02f2bc27ddd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "15eb94a52a244630a73272328b928f89", async() => {
                 BeginContext(777, 1, true);
                 WriteLiteral(" ");
                 EndContext();

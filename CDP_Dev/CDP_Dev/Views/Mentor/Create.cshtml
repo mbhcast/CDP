@@ -1,7 +1,7 @@
 ﻿@model CDP.Core.Mentors.UserMentor
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Mentor";
 }
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <h3>Create Mentor</h3>
@@ -69,7 +69,8 @@
 </div>
 
 <div>
-    <a asp-action="UserMentor">Back to List</a>
+    @*<a asp-action="UserMentor">Back to List</a>*@
+    <a class="btn btn-info" asp-action="UserMentor"><span class="glyphicon glyphicon-arrow-left"></span></a>
 </div>
 
 <script type="text/javascript">

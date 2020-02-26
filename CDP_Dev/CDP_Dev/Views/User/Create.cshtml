@@ -1,10 +1,10 @@
 ﻿@model CDP.Core.Users.User
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create New Employee";
 }
 
-<h3>Create New User</h3>
+<h3>Create New Employee</h3>
 
 <hr />
 <div class="row">
@@ -55,7 +55,8 @@
 </div>
 
 <div>
-    <a asp-action="List">Back to List</a>
+    @*<a asp-action="List">Back to List</a>*@
+    <a class="btn btn-info" asp-action="List"><span class="glyphicon glyphicon-arrow-left"></span></a>
 </div>
 
 @section Scripts {

@@ -1,12 +1,10 @@
 ﻿@model CDP.Core.Training.TrainingMaster
 
 @{
-    ViewData["Title"] = "Edit Training";
+    ViewData["Title"] = "Edit Training Master";
 }
 
-<h2>EditTrainingMaster</h2>
-
-<h4>TrainingMasterModel</h4>
+<h3>Edit Training Master</h3>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -50,14 +48,15 @@
                 </div>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-warning" />
+                <input type="submit" value="Update" class="btn btn-warning" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="TrainingList">Back to List</a>
+    @*<a asp-action="TrainingList">Back to List</a>*@
+    <a class="btn btn-info" asp-action="TrainingList"><span class="glyphicon glyphicon-arrow-left"></span></a>
 </div>
 
 @section Scripts {

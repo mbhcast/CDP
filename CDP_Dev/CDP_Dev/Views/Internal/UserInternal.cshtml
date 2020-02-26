@@ -10,9 +10,14 @@
 <h2>User Internal List</h2>
 
 <p>
-    <a type="button" class="btn btn-success" asp-action="CreateUserInternal"><span class="glyphicon glyphicon-plus"></span> </a>
+    @*<a type="button" class="btn btn-success" asp-action="CreateUserInternal"><span class="glyphicon glyphicon-plus"></span> </a>*@
     <a type="button" class="btn btn-info" asp-action="List"><span class="glyphicon glyphicon-list"></span> </a>
 </p>
+<div id="goToTop" style="display: block;">
+    <a class="btn" id="Create" asp-action="CreateUserInternal" style="margin-bottom: 29px;color:white;font-size:20px">
+        <span class="glyphicon glyphicon-plus"></span>
+    </a>
+</div>
 <div class="row">
     <div class="col-md-4">
         <div class="form-group">

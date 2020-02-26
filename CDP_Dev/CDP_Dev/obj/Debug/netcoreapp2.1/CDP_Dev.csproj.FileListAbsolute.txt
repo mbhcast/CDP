@@ -272,6 +272,7 @@ E:\MBH\Projects\CDP_Dev\CDP_Dev\obj\Debug\netcoreapp2.1\CDP_Dev.Views.pdb
 E:\MBH\Projects\CDP_Dev\CDP_Dev\obj\Debug\netcoreapp2.1\CDP_Dev.csproj.CopyComplete
 E:\MBH\Projects\CDP_Dev\CDP_Dev\obj\Debug\netcoreapp2.1\CDP_Dev.dll
 E:\MBH\Projects\CDP_Dev\CDP_Dev\obj\Debug\netcoreapp2.1\CDP_Dev.pdb
+E:\git\repo\CDP_Dev\CDP_Dev\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_Layout.cshtml.g.cs
 E:\git\repo\CDP_Dev\CDP_Dev\bin\Debug\netcoreapp2.1\appsettings.Development.json
 E:\git\repo\CDP_Dev\CDP_Dev\bin\Debug\netcoreapp2.1\appsettings.json
 E:\git\repo\CDP_Dev\CDP_Dev\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
@@ -334,7 +335,6 @@ E:\git\repo\CDP_Dev\CDP_Dev\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\A
 E:\git\repo\CDP_Dev\CDP_Dev\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\ResetAuthenticator.cshtml.g.cs
 E:\git\repo\CDP_Dev\CDP_Dev\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\SetPassword.cshtml.g.cs
 E:\git\repo\CDP_Dev\CDP_Dev\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml.g.cs
-E:\git\repo\CDP_Dev\CDP_Dev\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_Layout.cshtml.g.cs
 E:\git\repo\CDP_Dev\CDP_Dev\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
 E:\git\repo\CDP_Dev\CDP_Dev\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_StatusMessage.cshtml.g.cs
 E:\git\repo\CDP_Dev\CDP_Dev\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs

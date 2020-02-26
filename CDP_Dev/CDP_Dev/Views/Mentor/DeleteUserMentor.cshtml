@@ -71,6 +71,7 @@
     
     <form asp-action="DeleteUserMentor">
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="UserMentor">Back to List</a>
+        @*<a asp-action="UserMentor">Back to List</a>*@
+        <a class="btn btn-info" asp-action="UserMentor"><span class="glyphicon glyphicon-arrow-left"></span></a>
     </form>
 </div>

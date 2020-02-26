@@ -17,6 +17,7 @@ E:\MBH\Projects\CDP_Dev\CDP.Core\obj\Debug\netstandard2.0\CDP.Core.pdb
 E:\git\repo\CDP_Dev\CDP.Core\bin\Debug\netstandard2.0\CDP.Core.deps.json
 E:\git\repo\CDP_Dev\CDP.Core\bin\Debug\netstandard2.0\CDP.Core.dll
 E:\git\repo\CDP_Dev\CDP.Core\bin\Debug\netstandard2.0\CDP.Core.pdb
+E:\git\repo\CDP_Dev\CDP.Core\obj\Debug\netstandard2.0\CDP.Core.csprojAssemblyReference.cache
 E:\git\repo\CDP_Dev\CDP.Core\obj\Debug\netstandard2.0\CDP.Core.AssemblyInfoInputs.cache
 E:\git\repo\CDP_Dev\CDP.Core\obj\Debug\netstandard2.0\CDP.Core.AssemblyInfo.cs
 E:\git\repo\CDP_Dev\CDP.Core\obj\Debug\netstandard2.0\CDP.Core.dll

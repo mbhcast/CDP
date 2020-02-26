@@ -12,14 +12,18 @@
 <h3>Training Category List</h3>
 
 <p>
-    <a type="button" class="btn btn-success" asp-action="Create">
+    @*<a type="button" class="btn btn-success" asp-action="Create">
         <span class="glyphicon glyphicon-plus"></span>
-    </a>
+    </a>*@
     <a type="button" class="btn btn-info" asp-action="TrainingList">
         <span class="glyphicon glyphicon-list"></span> Training Master
     </a>
 </p>
-
+<div id="goToTop" style="display: block;">
+    <a class="btn" id="Create" asp-action="Create" style="margin-bottom: 29px;color:white;font-size:20px">
+        <span class="glyphicon glyphicon-plus"></span>
+    </a>
+</div>
 <div class="container">
     <br />
     <div style="margin:0 auto;">

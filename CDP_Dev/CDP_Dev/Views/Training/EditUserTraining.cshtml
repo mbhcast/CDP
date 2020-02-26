@@ -1,7 +1,7 @@
 ﻿@model CDP.Core.Training.UserTraining
 
 @{
-    ViewData["Title"] = "EditUserTraining";
+    ViewData["Title"] = "Edit User Training";
 }
 
 <h3>Edit User Training</h3>
@@ -26,14 +26,15 @@
                 <span asp-validation-for="Priority" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-warning" />
+                <input type="submit" value="Update" class="btn btn-warning" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="UserTraining">Back to List</a>
+    @*<a asp-action="UserTraining">Back to List</a>*@
+    <a class="btn btn-info" asp-action="UserTraining"><span class="glyphicon glyphicon-arrow-left"></span></a>
 </div>
 
 @section Scripts {

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Delete Training Master";
 }
 
-<h2>Delete Training Master</h2>
+<h3>Delete Training Master</h3>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
@@ -74,6 +74,7 @@
     
     <form asp-action="DeleteTrainingMaster">
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="trainingList">Back to List</a>
+        @*<a asp-action="trainingList">Back to List</a>*@
+        <a class="btn btn-info" asp-action="TrainingList"><span class="glyphicon glyphicon-arrow-left"></span></a>
     </form>
 </div>

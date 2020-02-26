@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Delete";
 }
-<h3>Are you sure you want to delete this user?</h3>
+<h3>Are you sure you want to delete this Employee?</h3>
 <div>
     <hr />
     <dl class="dl-horizontal">
@@ -77,6 +77,7 @@
     
     <form asp-action="Delete">
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="List">Back to List</a>
+        <a class="btn btn-info" asp-action="List"><span class="glyphicon glyphicon-arrow-left"></span></a>
+        @*<a asp-action="List">Back to List</a>*@
     </form>
 </div>

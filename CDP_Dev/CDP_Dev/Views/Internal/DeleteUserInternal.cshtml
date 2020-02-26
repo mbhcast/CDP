@@ -65,6 +65,7 @@
     
     <form asp-action="DeleteUserInternal">
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="UserInternal">Back to List</a>
+        @*<a asp-action="UserInternal">Back to List</a>*@
+        <a class="btn btn-info" asp-action="UserInternal"><span class="glyphicon glyphicon-arrow-left"></span></a>
     </form>
 </div>

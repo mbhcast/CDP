@@ -35,6 +35,7 @@
     
     <form asp-action="Delete">
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="List">Back to List</a>
+        @*<a asp-action="List">Back to List</a>*@
+        <a class="btn btn-info" asp-action="List"><span class="glyphicon glyphicon-arrow-left"></span></a>
     </form>
 </div>
